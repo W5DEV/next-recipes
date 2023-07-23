@@ -1,9 +1,9 @@
-import Hero from '@/app/(site)/components/Hero';
+import RecipeModule from '../../components/RecipeModule';
 
 export default function RecipePage() {
   return (
     <main>
-      <Hero />
+      <RecipeModule />
     </main>
   );
 }
