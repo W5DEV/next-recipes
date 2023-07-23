@@ -1,9 +1,9 @@
-import Hero from '@/app/(site)/components/Hero';
+import FeaturedRecipes from '@/app/(site)/components/FeaturedRecipes';
 
 export default function Demo() {
   return (
     <main>
-      <Hero />
+      <FeaturedRecipes />
     </main>
   );
 }
