@@ -1,9 +1,9 @@
-import Hero from '@/app/(site)/components/Hero';
+import RoadmapComponent from '../components/RoadmapComponent';
 
 export default function Roadmap() {
   return (
     <main>
-      <Hero />
+      <RoadmapComponent />
     </main>
   );
 }
