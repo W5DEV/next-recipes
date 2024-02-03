@@ -13,8 +13,10 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang='en'>
-      <body className={inter.className}>
+    <html lang='en' className='w-full h-full'>
+      <body
+        className={`${inter.className} flex flex-col justify-between items-center h-full w-full`}
+      >
         <Navigation />
         {children}
         <Footer />
