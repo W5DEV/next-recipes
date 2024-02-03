@@ -1,4 +1,4 @@
-import Recipes from '../../../../data/recipes.json';
+import Recipes from '../../../data/recipes.json';
 import Image from 'next/image';
 
 export default function Example() {

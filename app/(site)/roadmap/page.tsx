@@ -1,4 +1,4 @@
-import RoadmapComponent from '../components/RoadmapComponent';
+import RoadmapComponent from '../../components/RoadmapComponent';
 
 export default function Roadmap() {
   return (

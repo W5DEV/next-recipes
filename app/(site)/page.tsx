@@ -1,6 +1,6 @@
-import Hero from './components/Hero';
-import FeaturedRecipes from './components/FeaturedRecipes';
-import CTA from './components/CTA';
+import Hero from '../components/Hero';
+import FeaturedRecipes from '../components/FeaturedRecipes';
+import CTA from '../components/CTA';
 
 export default function Home() {
   return (

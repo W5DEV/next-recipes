@@ -1,15 +1,16 @@
 interface LogoProps {
-  color: string;
+  color?: string;
+  height?: string;
 }
 
-export default function Logo({ color }: LogoProps) {
+export default function Logo({ color, height }: LogoProps) {
   return (
     <svg
       version='1.2'
       xmlns='http://www.w3.org/2000/svg'
       viewBox='0 0 286 286'
-      height='65'
-      fill={color}
+      height={height ?? '65'}
+      fill={color ?? '#06b6d4'}
       className='w-auto h-auto'
     >
       <path
