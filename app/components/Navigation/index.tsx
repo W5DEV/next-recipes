@@ -16,7 +16,7 @@ export default function Navigation() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <div className='sticky top-0 z-50 w-screen  bg-gradient-to-b from-white to-transparent'>
+    <div className='sticky top-0 z-50 w-screen bg-gradient-to-b from-white to-transparent'>
       <nav
         className='flex items-center justify-between p-6 mx-auto max-w-7xl lg:px-8'
         aria-label='Global'
@@ -24,7 +24,7 @@ export default function Navigation() {
         <div className='flex mx-12 lg:flex-1'>
           <Link href='/' className='-m-1.5 p-1.5'>
             <span className='sr-only'>Your Company</span>
-            <Logo color={'#06b6d4'} />
+            <Logo />
           </Link>
         </div>
         <div className='flex lg:hidden'>
