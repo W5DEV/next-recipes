@@ -14,9 +14,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang='en' className='h-full'>
       <body className={inter.className}>
-        <Dashboard />
         <main>
-          <div className='mx-auto max-w-7xl sm:px-6 lg:px-8'>{children}</div>
+          <Dashboard>{children}</Dashboard>
         </main>
       </body>
     </html>
