@@ -8,11 +8,9 @@ export default function RoadmapComponent() {
           <li>User Login</li>
           <li>Recipe Upload</li>
           <li>Recipe Edit</li>
-          <li>Newsletter Sign-up</li>
+          <li>Credentials Request</li>
           <li>Recipe Search</li>
           <li>User Favorites</li>
-          <li>User Profile</li>
-          <li>Recipe Sharing</li>
         </ul>
       </div>
     </div>
