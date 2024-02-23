@@ -1,6 +1,4 @@
-/* eslint-disable @typescript-eslint/no-misused-promises */
 import Logo from '@/app/components/Logo';
-import { login, signup } from './actions';
 
 export default function Example() {
   return (
@@ -60,14 +58,12 @@ export default function Example() {
             <button
               type='submit'
               className='flex w-full justify-center rounded-md bg-cyan-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-cyan-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cyan-600'
-              formAction={login}
             >
               Sign in
             </button>
             <button
               type='submit'
               className='flex w-full justify-center rounded-md bg-cyan-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-cyan-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cyan-600'
-              formAction={signup}
             >
               Sign up
             </button>
