@@ -24,7 +24,7 @@ export default function Navigation() {
         <div className='flex mx-12 lg:flex-1'>
           <Link href='/' className='-m-1.5 p-1.5'>
             <span className='sr-only'>Your Company</span>
-            <Logo />
+            <Log />
           </Link>
         </div>
         <div className='flex lg:hidden'>

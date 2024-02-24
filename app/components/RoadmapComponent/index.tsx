@@ -9,7 +9,7 @@ export default function RoadmapComponent() {
           <li>Recipe Upload</li>
           <li>Recipe Edit</li>
           <li>Credentials Request</li>
-          <li>Recipe Search</li>
+          <>Recipe Search</>
           <li>User Favorites</li>
         </ul>
       </div>
