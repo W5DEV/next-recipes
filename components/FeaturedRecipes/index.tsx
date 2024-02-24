@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-unsafe-assignment */
-import Recipes from '../../../data/recipes.json';
+import Recipes from '../../data/recipes.json';
 import Image from 'next/image';
 
 export default function Example() {

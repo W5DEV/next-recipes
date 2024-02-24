@@ -1,6 +1,5 @@
 import '../../globals.css';
 import type { Metadata } from 'next';
-import Dashboard from '../../components/Dashboard';
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -10,11 +9,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang='en' className='h-full'>
-      <body>
-        <main>
-          <Dashboard>{children}</Dashboard>
-        </main>
-      </body>
+      <body>{children}</body>
     </html>
   );
 }
