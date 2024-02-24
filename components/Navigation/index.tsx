@@ -49,7 +49,7 @@ export default function Navigation() {
           ))}
         </div>
         <div className='hidden lg:flex lg:flex-1 lg:justify-end'>
-          <Link href={'/admin'} className='text-sm font-semibold leading-6 text-gray-900'>
+          <Link href={'/login'} className='text-sm font-semibold leading-6 text-gray-900'>
             Log in <span aria-hidden='true'>&rarr;</span>
           </Link>
         </div>
