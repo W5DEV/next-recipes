@@ -23,7 +23,7 @@ export default function Home() {
       }
     };
     validateUser();
-  });
+  }, [router]);
   return (
     <Dashboard name={name}>
       <div className='w-full h-full'>

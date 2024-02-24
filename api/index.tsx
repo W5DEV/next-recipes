@@ -12,6 +12,21 @@ interface iUserLoginResponse {
   message?: string;
 }
 
+interface iUserValidationResponse {
+  data?: {
+    user?: string;
+    id?: string;
+    name?: string;
+    email?: string;
+    role?: string;
+    provider?: string;
+    created_at?: string;
+    updated_at?: string;
+  };
+  status?: string;
+  message?: string;
+}
+
 const apiUrl = process.env.API_URL;
 
 const token = cookies().get('User-Token');
@@ -43,7 +58,8 @@ export const UserValidation = async (): Promise<any> => {
     const response = await axios.get(`${apiUrl}/users/me`, {
       headers: { Authorization: `Bearer ${token?.value}` },
     });
-    return response.data;
+    const responseData = response.data as iUserValidationResponse;
+    return responseData;
   } catch (e) {
     const error = e as AxiosError;
 

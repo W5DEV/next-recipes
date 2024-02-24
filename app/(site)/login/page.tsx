@@ -29,6 +29,6 @@ export default function Login() {
       }
     };
     validateUser();
-  });
+  }, []);
   return <>{userLoggedIn ? <LoggedInSplash name={name} /> : <LoginForm />}</>;
 }
