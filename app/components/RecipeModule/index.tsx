@@ -11,7 +11,7 @@ export default function RecipeModule() {
       return targetRecipe;
     }
   });
-  const ingredients = recie && recipe.ingredients;
+  const ingredients = recipe && recipe.ingredients;
   const instructions = recipe && recipe.instructions;
 
   return (
