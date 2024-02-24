@@ -1,22 +1,23 @@
 'use client';
-interface iRecipe {
-  id: number;
-  title: string;
-  slug: string;
-  description: string;
-  category: string;
-  ingredients: string[];
-  instructions: string[];
-  image: string;
-  inactive: boolean;
-  chef: string;
-  tags: string[];
-  createdAt: string;
-  updatedAt: string;
+interface iRecipeModuleProps {
+  recipe: {
+    id: number;
+    title: string;
+    slug: string;
+    description: string;
+    category: string;
+    ingredients: string[];
+    instructions: string[];
+    image: string;
+    inactive: boolean;
+    chef: string;
+    tags: string[];
+    createdAt: string;
+    updatedAt: string;
+  };
 }
 
-export default function RecipeModule(props: { recipe: iRecipe }) {
-  const recipe = props.recipe;
+export default function RecipeModule({ recipe }: iRecipeModuleProps) {
   const ingredients = recipe && recipe.ingredients;
   const instructions = recipe && recipe.instructions;
 
