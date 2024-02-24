@@ -12,7 +12,7 @@ interface iUserLoginResponse {
   message?: string;
 }
 
-interface iUserValidationResponse {
+export interface iUserValidationResponse {
   data?: {
     user?: string;
     id?: string;
@@ -25,6 +25,28 @@ interface iUserValidationResponse {
   };
   status?: string;
   message?: string;
+}
+
+export interface iRecipe {
+  id: string;
+  title: string;
+  slug: string;
+  description: string;
+  category: string;
+  ingredients: string[];
+  instructions: string[];
+  image: string;
+  chef: string;
+  tags: string[];
+  created_at: string;
+  updated_at: string;
+}
+
+interface iAllRecipes {
+  data?: iRecipe[];
+  results?: number;
+  message?: string;
+  status?: string;
 }
 
 const apiUrl = process.env.API_URL;
@@ -44,8 +66,8 @@ export const UserLogin = async (email: string, password: string): Promise<any> =
         value: responseData.token,
         sameSite: 'strict',
       });
-    } else if (responseData.message) {
-      return responseData.message;
+    } else {
+      return;
     }
     return responseData.status;
   } catch (e) {
@@ -54,15 +76,22 @@ export const UserLogin = async (email: string, password: string): Promise<any> =
 };
 
 export const UserValidation = async (): Promise<any> => {
+  if (!token) {
+    console.log('No token found');
+    const noTokenResponse = {
+      status: 'error',
+      message: 'No token found',
+    };
+    return noTokenResponse;
+  }
   try {
     const response = await axios.get(`${apiUrl}/users/me`, {
-      headers: { Authorization: `Bearer ${token?.value}` },
+      headers: { Authorization: `Bearer ${token.value}` },
     });
     const responseData = response.data as iUserValidationResponse;
     return responseData;
   } catch (e) {
     const error = e as AxiosError;
-
     return error;
   }
 };
@@ -79,66 +108,97 @@ export const UserValidation = async (): Promise<any> => {
 }; */
 
 export const GetAllRecipes = async (): Promise<any> => {
+  if (!token) {
+    const noTokenResponse = {
+      status: 'error',
+      message: 'No token found',
+    };
+    return noTokenResponse;
+  }
   try {
     const response = await axios.get(`${apiUrl}/recipes`, {
-      headers: { Authorization: `Bearer ${token?.value}` },
+      headers: { Authorization: `Bearer ${token.value}` },
     });
-    return response.data;
+    const responseData = response.data as iAllRecipes;
+    return responseData;
   } catch (e) {
     const error = e as AxiosError;
-
     return error;
   }
 };
 
 export const GetRecipeById = async (id: string): Promise<any> => {
+  if (!token) {
+    const noTokenResponse = {
+      status: 'error',
+      message: 'No token found',
+    };
+    return noTokenResponse;
+  }
   try {
     const response = await axios.get(`${apiUrl}/recipes/${id}`, {
-      headers: { Authorization: `Bearer ${token?.value}` },
+      headers: { Authorization: `Bearer ${token.value}` },
     });
     return response.data;
   } catch (e) {
     const error = e as AxiosError;
-
     return error;
   }
 };
 
 export const CreateRecipe = async (recipe: any): Promise<any> => {
+  if (!token) {
+    const noTokenResponse = {
+      status: 'error',
+      message: 'No token found',
+    };
+    return noTokenResponse;
+  }
   try {
     const response = await axios.post(`${apiUrl}/recipes`, recipe, {
-      headers: { Authorization: `Bearer ${token?.value}` },
+      headers: { Authorization: `Bearer ${token.value}` },
     });
     return response.data;
   } catch (e) {
     const error = e as AxiosError;
-
     return error;
   }
 };
 
 export const UpdateRecipe = async (id: string, recipe: any): Promise<any> => {
+  if (!token) {
+    const noTokenResponse = {
+      status: 'error',
+      message: 'No token found',
+    };
+    return noTokenResponse;
+  }
   try {
     const response = await axios.post(`${apiUrl}/recipes/${id}`, recipe, {
-      headers: { Authorization: `Bearer ${token?.value}` },
+      headers: { Authorization: `Bearer ${token.value}` },
     });
     return response.data;
   } catch (e) {
     const error = e as AxiosError;
-
     return error;
   }
 };
 
 export const DeleteRecipe = async (id: string): Promise<any> => {
+  if (!token) {
+    const noTokenResponse = {
+      status: 'error',
+      message: 'No token found',
+    };
+    return noTokenResponse;
+  }
   try {
     const response = await axios.delete(`${apiUrl}/recipes/${id}`, {
-      headers: { Authorization: `Bearer ${token?.value}` },
+      headers: { Authorization: `Bearer ${token.value}` },
     });
     return response.data;
   } catch (e) {
     const error = e as AxiosError;
-
     return error;
   }
 };

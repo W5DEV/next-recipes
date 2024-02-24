@@ -9,9 +9,11 @@ import { useRouter } from 'next/navigation';
 import LoggedInSplash from '@/components/LoggedInSplash';
 
 export default function Login() {
+  const [isLoaded, setIsLoaded] = useState(false);
   const [userLoggedIn, setUserLoggedIn] = useState(false);
   const [name, setName] = useState('');
   const router = useRouter();
+
   useEffect(() => {
     const validateUser = async () => {
       const res = await UserValidation();
@@ -19,16 +21,29 @@ export default function Login() {
       if (status === 'success') {
         const fullName = res.data.user.name as string;
         const firstName = fullName.split(' ')[0];
-        setName(firstName);
+        setIsLoaded(true);
         setUserLoggedIn(true);
+        setName(firstName);
         setTimeout(() => {
           router.push('/admin');
-        }, 1000);
+        }, 1500);
       } else {
-        return;
+        setIsLoaded(true);
+        setUserLoggedIn(false);
       }
     };
     validateUser();
-  }, []);
-  return <>{userLoggedIn ? <LoggedInSplash name={name} /> : <LoginForm />}</>;
+  }, [router]);
+
+  return (
+    <>
+      {!isLoaded ? (
+        <div>Loading...</div>
+      ) : userLoggedIn ? (
+        <LoggedInSplash name={name} />
+      ) : (
+        <LoginForm />
+      )}
+    </>
+  );
 }

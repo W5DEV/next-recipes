@@ -2,15 +2,27 @@
 /* eslint-disable @typescript-eslint/no-unsafe-member-access */
 /* eslint-disable @typescript-eslint/no-unsafe-assignment */
 'use client';
+import type { iRecipe } from '@/api';
 import { useEffect, useState } from 'react';
 import Dashboard from '@/components/Dashboard';
-import { UserValidation } from '@/api';
+import { GetAllRecipes, UserValidation } from '@/api';
 import { useRouter } from 'next/navigation';
 
 export default function Home() {
   const [name, setName] = useState('');
   const router = useRouter();
+  const [recipes, setRecipes] = useState<iRecipe[]>([]);
   useEffect(() => {
+    const getRecipes = async () => {
+      const res = await GetAllRecipes();
+      const status = res.status;
+      if (status === 'success') {
+        const allRecipes = res.data as iRecipe[];
+        setRecipes(allRecipes);
+      } else {
+        setRecipes([]);
+      }
+    };
     const validateUser = async () => {
       const res = await UserValidation();
       const status = res.status;
@@ -23,12 +35,18 @@ export default function Home() {
       }
     };
     validateUser();
+    getRecipes();
   }, [router]);
   return (
     <Dashboard name={name}>
-      <div className='w-full h-full'>
-        {name ? <h1>Welcome, {name}!</h1> : <span>Admin portal coming soon!</span>}
-      </div>
+      <ul>
+        {recipes.map((recipe) => (
+          <li key={recipe.id}>
+            <h2>{recipe.title}</h2>
+            <p>{recipe.description}</p>
+          </li>
+        ))}
+      </ul>
     </Dashboard>
   );
 }
