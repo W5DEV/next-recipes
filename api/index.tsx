@@ -4,7 +4,7 @@
 
 import axios from 'axios';
 
-const apiUrl = process.env.REACT_APP_API_URL;
+const apiUrl = process.env.API_URL;
 
 export const UserLogin = async (email: string, password: string): Promise<any> => {
   try {
