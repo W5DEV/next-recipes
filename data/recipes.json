@@ -2,706 +2,204 @@
   {
     "id": 1,
     "title": "6 Pepper Chili",
-    "description": "Delicious chili made with dried pasilla, arbol, chipotle, guajillo, ancho and casabel chilis!",
-    "global": true,
-    "active": true,
-    "category": "Soups/Chilis",
     "slug": "6-pepper-chili",
-    "picture": "https://images.unsplash.com/photo-1638329389022-daef2efb71b3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1035&q=80",
-    "profiles": {
-      "username": "John"
+    "description": "Delicious chili made with dried pasilla, arbol, chipotle, guajillo, ancho and casabel chilis!",
+    "category": "Soups/Chili",
+    "ingredients": {
+      "1": "3 Dried Guajillo Chiles, De-Stemmed and De-Seeded",
+      "2": "4 Dried Pasilla Chiles, De-Stemmed and De-Seeded",
+      "3": "3 Dried Casabel Chiles, De-Stemmed and De-Seeded",
+      "4": "3 Dried Ancho Chiles, De-Stemmed and De-Seeded",
+      "5": "4 Dried Chipotle Chiles, De-Stemmed and De-Seeded",
+      "6": "4 Dried Arbol Chiles, De-Stemmed and De-Seeded",
+      "7": "3 Finely Minced Jalapeños (or 4oz canned)",
+      "8": "1 Large Yellow Onion, Roughly Chopped",
+      "9": "4-5 Garlic Cloves, Crushed",
+      "10": "12oz Bacon, Chopped Roughly",
+      "11": "3 lb. Chuck Roast, Removed of Fat and Cubed (or your choice of meat)",
+      "12": "1 Tbsp Cocoa Powder",
+      "13": "3 Tbsp Corn Flour",
+      "14": "1 Tbsp Ground Cumin",
+      "15": "1 Tbsp Ground Mexican Oregano",
+      "16": "1 Tbsp Ground Coriander",
+      "17": "32oz Chicken Stock",
+      "18": "6 cans of Preferred Beans (Kidney, Pinto, etc)",
+      "19": "1 14.5 oz Cans of Quality Diced Tomatoes",
+      "20": "12oz Beer of Choice",
+      "21": "2 Tbsp Brown Sugar",
+      "22": "12oz Tomato Paste",
+      "23": "2 cans of Original or Fire Roasted RO*TEL"
     },
-    "ingredients": [
-      {
-        "id": 12,
-        "ingredient": "Tbsp Cocoa Powder",
-        "amount": "1"
-      },
-      {
-        "id": 13,
-        "ingredient": "Tbsp Corn Flour",
-        "amount": "3"
-      },
-      {
-        "id": 14,
-        "ingredient": "Tbsp Ground Cumin",
-        "amount": "1"
-      },
-      {
-        "id": 15,
-        "ingredient": "Tbsp Ground Mexican Oregano",
-        "amount": "1"
-      },
-      {
-        "id": 19,
-        "ingredient": "Large Yellow Onion, Roughly Chopped",
-        "amount": "1"
-      },
-      {
-        "id": 16,
-        "ingredient": "Tbsp Ground Coriander",
-        "amount": "1"
-      },
-      {
-        "id": 9,
-        "ingredient": "Dried Guajillo Chiles, De-Stemmed and De-Seeded",
-        "amount": "3"
-      },
-      {
-        "id": 20,
-        "ingredient": "oz Chicken Stock",
-        "amount": "32"
-      },
-      {
-        "id": 21,
-        "ingredient": "Garlic Cloves, Crushed",
-        "amount": "4-5"
-      },
-      {
-        "id": 25,
-        "ingredient": "cans of Preferred Beans (Kidney, Pinto, etc)",
-        "amount": "6"
-      },
-      {
-        "id": 17,
-        "ingredient": "14.5 oz Cans of Quality Diced Tomatoes",
-        "amount": "1"
-      },
-      {
-        "id": 18,
-        "ingredient": "Finely Minced Jalapeños (or 4oz canned)",
-        "amount": "3"
-      },
-      {
-        "id": 22,
-        "ingredient": "oz Beer of Choice",
-        "amount": "12"
-      },
-      {
-        "id": 23,
-        "ingredient": "Tbsp Brown Sugar",
-        "amount": "2"
-      },
-      {
-        "id": 10,
-        "ingredient": "Dried Ancho Chiles, De-Stemmed and De-Seeded",
-        "amount": "3"
-      },
-      {
-        "id": 24,
-        "ingredient": "oz Tomato Paste",
-        "amount": "12"
-      },
-      {
-        "id": 105,
-        "ingredient": "cans of Original or Fire Roasted RO*TEL",
-        "amount": "2"
-      },
-      {
-        "id": 2,
-        "ingredient": "oz Bacon, Chopped Roughly",
-        "amount": "12"
-      },
-      {
-        "id": 3,
-        "ingredient": "Dried Pasilla Chiles, De-Stemmed and De-Seeded",
-        "amount": "2"
-      },
-      {
-        "id": 7,
-        "ingredient": "Dried Arbol Chiles, De-Stemmed and De-Seeded ",
-        "amount": "4"
-      },
-      {
-        "id": 8,
-        "ingredient": "Dried Chipotle Chiles, De-Stemmed and De-Seeded",
-        "amount": "4"
-      },
-      {
-        "id": 11,
-        "ingredient": "Dried Casabel Chiles, De-Stemmed and De-Seeded",
-        "amount": "3"
-      },
-      {
-        "id": 1,
-        "ingredient": "lb. Chuck Roast, Removed of Fat and Cubed (or your choice of meat)",
-        "amount": "3"
-      }
-    ],
-    "instructions": [
-      {
-        "id": 13,
-        "heading": null,
-        "description": "You should have some leftover grease in the pot, enough to sweat the onions and vegetables without them sticking. Roughly chop the onion, then add to the pot, along with the garlic and jalapeños. Cook til fragrant, mixing while scraping the fond from the bottom of the pot. Do not “cook down”, they should be slightly undercooked."
-      },
-      {
-        "id": 15,
-        "heading": null,
-        "description": "Bring to a bare-simmer and let simmer for 2-3 hours or until the beans and beef are tender and the chili has thickened. (You can also do this in a 300 degree oven, with the lid slightly ajar from the pot)."
-      },
-      {
-        "id": 1,
-        "heading": null,
-        "description": "De-fat the meat if it is not already done, then cut the beef in strips about half an inch wide in both directions then lay on a baking sheet and use paper towels to dry the meat. Stack the strips and cut into small cubes, then roughly chop slightly larger than the consistency of dog food or there about. Small, uneven chunks are desired. Season with salt and pepper and set aside for later use."
-      },
-      {
-        "id": 10,
-        "heading": null,
-        "description": "Add the chilis and liquid to a blender, then combine with the cocoa powder, corn flour, ground cumin, Mexican oregano, and ground coriander. Pulse til this reaches a paste-like consistency. Pour in a container for later use."
-      },
-      {
-        "id": 12,
-        "heading": null,
-        "description": "Make sure the beef is dry, then brown the beef in batches the cooking pot, making sure the batches are small enough so the beef doesn’t steam, but only browns, then set the beef aside for later use. Do not clean the pot of the fond.\n\nFeel free to season your beef or meat of choice during the cooking process with salt, pepper, and any seasonings of your choice!"
-      },
-      {
-        "id": 11,
-        "heading": null,
-        "description": "Add the chopped bacon to a stainless steel cooking pot big enough to hold your chili, cook until done, then remove the bacon, leaving the grease. Save the bacon for later use."
-      },
-      {
-        "id": 9,
-        "heading": null,
-        "description": "Combine all dried chilis, free of stems and seeds and torn in small pieces, into a dry pan. Roast on medium heat til fragrant, at which point add ¾ cup of chicken stock and enough water to just cover the chilis. Simmer the liquid, then kill the heat and let steep for 10 minutes."
-      },
-      {
-        "id": 14,
-        "heading": null,
-        "description": "Once fragrant and hot and steamy, deglaze with beer and bring to a simmer, mixing in the remainder of chicken stock in carton, tomato, brown sugar, tomato paste, kidney beans to preference, bacon, meat, and the chili paste from step 3."
-      }
-    ]
-  },
-  {
-    "id": 6,
-    "title": "Authentic Chicken Enchiladas",
-    "description": "These chicken enchiladas are sure to be crowd pleasers! Made with dried chiles and filled with juicy all white meat chicken, you are sure to leave your guests wishing they had more!",
-    "global": true,
-    "active": true,
-    "category": "Mexican",
-    "slug": "authentic-chicken-enchiladas",
-    "picture": "https://images.unsplash.com/photo-1534352956036-cd81e27dd615?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1001&q=80",
-    "profiles": {
-      "username": "John"
+    "instructions": {
+      "1": "Combine all dried chilis, free of stems and seeds and torn in small pieces, into a dry pan. Roast on medium heat til fragrant, at which point add ¾ cup of chicken stock and enough water to just cover the chilis. Simmer the liquid, then kill the heat and let steep for 10 minutes.",
+      "2": "Add the chilis and liquid to a blender, then combine with the cocoa powder, corn flour, ground cumin, Mexican oregano, and ground coriander. Pulse til this reaches a paste-like consistency. Pour in a container for later use.",
+      "3": "Add the chopped bacon to a stainless steel cooking pot big enough to hold your chili, cook until done, then remove the bacon, leaving the grease. Save the bacon for later use.",
+      "4": "De-fat the meat if it is not already done, then cut the beef in strips about half an inch wide in both directions then lay on a baking sheet and use paper towels to dry the meat. Stack the strips and cut into small cubes, then roughly chop slightly larger than the consistency of dog food or there about. Small, uneven chunks are desired. Season with salt and pepper and set aside for later use.",
+      "5": "Make sure the beef is dry, then brown the beef in batches the cooking pot, making sure the batches {are small enough so the beef doesn’t steam, but only browns, then set the beef aside for later use. Do not clean the pot of the fond.\n\nFeel free to season your beef or meat of choice during the cooking process with salt, pepper, and any seasonings of your choice!",
+      "6": "You should have some leftover grease in the pot, enough to sweat the onions and vegetables without them sticking. Roughly chop the onion, then add to the pot, along with the garlic and jalapeños. Cook til fragrant, mixing while scraping the fond from the bottom of the pot. Do not “cook down”, they should be slightly undercooked.",
+      "7": "Once fragrant and hot and steamy, deglaze with beer and bring to a simmer, mixing in the remainder of chicken stock in carton, tomato, brown sugar, tomato paste, kidney beans to preference, bacon, meat, and the chili paste from step 3.",
+      "8": "Bring to a bare-simmer and let simmer for 2-3 hours or until the beans and beef are tender and the chili has thickened. (You can also do this in a 300 degree oven, with the lid slightly ajar from the pot)."
     },
-    "ingredients": [
-      {
-        "id": 44,
-        "ingredient": "tsp Cinnamon",
-        "amount": "1/2"
-      },
-      {
-        "id": 43,
-        "ingredient": "tsp Allspice",
-        "amount": "1/2"
-      },
-      {
-        "id": 46,
-        "ingredient": "Cheese Sauce",
-        "amount": ""
-      },
-      {
-        "id": 47,
-        "ingredient": "oz Mild Cheddar Cheese, shredded",
-        "amount": "8"
-      },
-      {
-        "id": 48,
-        "ingredient": "Tbsp All Purpose Flour",
-        "amount": "3"
-      },
-      {
-        "id": 49,
-        "ingredient": "Tbsp Butter",
-        "amount": "3"
-      },
-      {
-        "id": 50,
-        "ingredient": "cups Whole Milk",
-        "amount": "2"
-      },
-      {
-        "id": 51,
-        "ingredient": "Assembly",
-        "amount": ""
-      },
-      {
-        "id": 52,
-        "ingredient": "lbs Chicken Breast",
-        "amount": "2"
-      },
-      {
-        "id": 118,
-        "ingredient": "Flour Tortillas (medium)",
-        "amount": "8-12 "
-      },
-      {
-        "id": 119,
-        "ingredient": "oz Oaxaca Cheese",
-        "amount": "12-16"
-      },
-      {
-        "id": 120,
-        "ingredient": "Poblano Peppers, halved",
-        "amount": "3"
-      },
-      {
-        "id": 37,
-        "ingredient": "Dried Pasilla Chiles",
-        "amount": "2"
-      },
-      {
-        "id": 38,
-        "ingredient": "Dried Guajillo Chiles",
-        "amount": "12"
-      },
-      {
-        "id": 39,
-        "ingredient": "Roma Tomatoes, halved",
-        "amount": "2"
-      },
-      {
-        "id": 40,
-        "ingredient": "Large Yellow Onion, quartered",
-        "amount": "1"
-      },
-      {
-        "id": 36,
-        "ingredient": "Dried Ancho Chiles",
-        "amount": "2"
-      },
-      {
-        "id": 41,
-        "ingredient": "Cloves of Garlic",
-        "amount": "4"
-      },
-      {
-        "id": 42,
-        "ingredient": "tsp Ground Cumin",
-        "amount": "2"
-      },
-      {
-        "id": 45,
-        "ingredient": "Tbsp Mexican Oregano, finely ground",
-        "amount": "1"
-      },
-      {
-        "id": 35,
-        "ingredient": "Enchilada Sauce",
-        "amount": ""
-      }
-    ],
-    "instructions": [
-      {
-        "id": 31,
-        "heading": null,
-        "description": "Assembly: grab a flour tortilla, dip it in your sauce, then place in the 9x13 pan. Add a generous scoop of chicken/poblano mixture, followed by a couple of strings of Oaxaca (this is to your liking). Roll the tortilla up moderately tight, making sure not to tear, and set against the edge of the pan. Do this until the pan is full or until you are out of tortillas. 10-12 medium flour tortillas should cover an entire 9x13 pan."
-      },
-      {
-        "id": 32,
-        "heading": null,
-        "description": "Drizzle your cheese sauce over the tops of your assembled enchiladas, making sure to cover them moderately, but not drown them. Follow that with a drizzle of your sauce, and sprinkle more of the shredded mild cheddar to your liking. "
-      },
-      {
-        "id": 33,
-        "heading": "Cook:",
-        "description": "Cover your 9x13 pan with aluminum foil and bake at 350°F for about 20-25 minutes or until the cheese is melted and bubbly, just before it turns brown. "
-      },
-      {
-        "id": 18,
-        "heading": "Sauce/Chicken:",
-        "description": "Cut, de-seed and de-stem all of the dried chiles, then place them in a large skillet on medium-high heat. Dry roast for approximately 5 minutes or just before they start to smoke. "
-      },
-      {
-        "id": 21,
-        "heading": null,
-        "description": "Once the chicken has reached the target temperature, remove the chicken, then transfer the rest of the solid contents to a blender, along with 2 teaspoons of ground cumin, 1/2 teaspoon of allspice and 1/2 teaspoon of cinnamon. Add the liquid from the pan until barely covered, and blend on high until fully emulsified. Add more liquid as needed to obtain your desired saucy texture - this should not be too thin, but should still be easily pourable. Add salt and pepper to taste and set aside for later use."
-      },
-      {
-        "id": 22,
-        "heading": null,
-        "description": "Shred the chicken and set aside for later use."
-      },
-      {
-        "id": 25,
-        "heading": null,
-        "description": "Mix the cubes of Poblano and shredded chicken generously, drizzling a bit of sauce over the mixture just so it changes color. "
-      },
-      {
-        "id": 29,
-        "heading": "Assembly:",
-        "description": "Set out a 9x13 pan, along with your medium flour tortillas, chicken and poblano mixture, enchilada sauce from earlier, and the cheese sauce. "
-      },
-      {
-        "id": 30,
-        "heading": null,
-        "description": "Take out approximately 16 ounces of Oaxaca cheese, and pull apart until stringy. "
-      },
-      {
-        "id": 24,
-        "heading": null,
-        "description": "Once cool to the touch, put on some gloves and remove the peppers. You should be able to rub the outer membrane of skin off the pepper, leaving a mushy, green pepper behind. Remove the outer membrane/skin from all peppers then slice into small cubes."
-      },
-      {
-        "id": 26,
-        "heading": "Cheese Sauce:",
-        "description": "Grab a pot and put over low/medium heat. "
-      },
-      {
-        "id": 20,
-        "heading": null,
-        "description": "Butterfly your chicken breasts (approximately 5-6) and submerge them into the mixture. Let the entire pan simmer for about 15 minutes, until the chicken reaches 165°F internal at the thickest point."
-      },
-      {
-        "id": 23,
-        "heading": "Poblanos:",
-        "description": "Half 3 large poblano peppers. Char/roast in pan in a 400°F oven or over an open grill flame until the skin is blackened. Once the skin is charred and bubbly, set aside in an aluminum foil pouch with 1/4 cup of water until cool."
-      },
-      {
-        "id": 27,
-        "heading": null,
-        "description": "Add 3 tablespoons of flour, 3 tablespoons of butter to a pan, then slowly stream in 2 cups of milk while stirring vigorously until you are left with a white, creamy sauce."
-      },
-      {
-        "id": 28,
-        "heading": null,
-        "description": "Lower the heat to low, and fold in approximately 8 oz of shredded mild/medium yellow cheddar. You should stir the sauce over the cheese so you incorporate it into the mixture, a little at a time. Do not put more than about a small handful in at once, stirring/folding until fully incorporated before adding another small handful. Do this until all of the cheese is thoroughly incorporated, then remove from heat. "
-      },
-      {
-        "id": 19,
-        "heading": null,
-        "description": "Douse the chiles with water, then add the halved roma tomatoes, quartered yellow onion, 4 whole garlic cloves and approximately 2 teaspoons of ground Mexican Oregano. Drop the heat to a simmer."
-      }
-    ]
+    "image": "https://images.unsplash.com/photo-1638329389022-daef2efb71b3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1035&q=80",
+    "inactive": false,
+    "chef": "John",
+    "tags": ["chili", "spicy", "beef", "beans"],
+    "createdAt": "2022-01-01T00:00:00.000Z",
+    "updatedAt": "2022-01-01T00:00:00.000Z"
   },
   {
     "id": 2,
+    "title": "Authentic Chicken Enchiladas",
+    "slug": "authentic-chicken-enchiladas",
+    "description": "These chicken enchiladas are sure to be crowd pleasers! Made with dried chiles and filled with juicy all white meat chicken, you are sure to leave your guests wishing they had more!",
+    "category": "Mexican",
+    "ingredients": {
+      "1": "1/2 tsp Cinnamon",
+      "2": "1/2 tsp Allspice",
+      "3": "8oz Mild Cheddar Cheese, shredded",
+      "4": "3 Tbsp All Purpose Flour",
+      "5": "3 Tbsp Butter",
+      "6": "2 cups Whole Milk",
+      "7": "2 lb. Chicken Breast",
+      "8": "8-12 Flour Tortillas (medium)",
+      "9": "12-16oz Oaxaca Cheese",
+      "10": "3 Poblano Peppers, halved",
+      "11": "2 Dried Pasilla Chiles",
+      "12": "12 Dried Guajillo Chiles",
+      "13": "2 Dried Ancho Chiles",
+      "14": "2 Roma Tomatoes, halved",
+      "15": "1 Large Oniion, quartered",
+      "16": "1 Tbsp Ground Mexican Oregano",
+      "17": "4 Cloves of Garlic",
+      "18": "2 tsp Ground Cumin",
+      "19": "1 Tbsp Mexican Oregano, finely ground"
+    },
+    "instructions": {
+      "1": "Cut, de-seed and de-stem all of the dried chiles, then place them in a large skillet on medium-high heat. Dry roast for approximately 5 minutes or just before they start to smoke. ",
+      "2": "Douse the chiles with water, then add the halved roma tomatoes, quartered yellow onion, 4 whole garlic cloves and approximately 2 teaspoons of ground Mexican Oregano. Drop the heat to a simmer.",
+      "3": "Butterfly your chicken breasts (approximately 5-6) and submerge them into the mixture. Let the entire pan simmer for about 15 minutes, until the chicken reaches 165°F internal at the thickest point.",
+      "4": "Once the chicken has reached the target temperature, remove the chicken, then transfer the rest of the solid contents to a blender, along with 2 teaspoons of ground cumin, 1/2 teaspoon of allspice and 1/2 teaspoon of cinnamon. Add the liquid from the pan until barely covered, and blend on high until fully emulsified. Add more liquid as needed to obtain your desired saucy texture - this should not be too thin, but should still be easily pourable. Add salt and pepper to taste and set aside for later use.",
+      "5": "Shred the chicken and set aside for later use.",
+      "6": "Half 3 large poblano peppers. Char/roast in pan in a 400°F oven or over an open grill flame until the skin is blackened. Once the skin is charred and bubbly, set aside in an aluminum foil pouch with 1/4 cup of water until cool.",
+      "7": "Once cool to the touch, put on some gloves and remove the peppers. You should be able to rub the outer membrane of skin off the pepper, leaving a mushy, green pepper behind. Remove the outer membrane/skin from all peppers then slice into small cubes.",
+      "8": "Mix the cubes of Poblano and shredded chicken generously, drizzling a bit of sauce over the mixture just so it changes color. ",
+      "9": "Set aside the chicken to start on the cheese sauce. Grab a pot and put over low/medium heat.",
+      "10": "Add 3 tablespoons of flour, 3 tablespoons of butter to a pan, then slowly stream in 2 cups of milk while stirring vigorously until you are left with a white, creamy sauce.",
+      "11": "Lower the heat to low, and fold in approximately 8 oz of shredded mild/medium yellow cheddar. You should stir the sauce over the cheese so you incorporate it into the mixture, a little at a time. Do not put more than about a small handful in at once, stirring/folding until fully incorporated before adding another small handful. Do this until all of the cheese is thoroughly incorporated, then remove from heat. ",
+      "12": "It's now time to assemble! Set out a 9x13 pan, along with your medium flour tortillas, chicken and poblano mixture, enchilada sauce from earlier, and the cheese sauce. ",
+      "13": "Take out approximately 16 ounces of Oaxaca cheese, and pull apart until stringy.",
+      "14": "Assembly: grab a flour tortilla, dip it in your sauce, then place in the 9x13 pan. Add a generous scoop of chicken/poblano mixture, followed by a couple of strings of Oaxaca (this is to your liking). Roll the tortilla up moderately tight, making sure not to tear, and set against the edge of the pan. Do this until the pan is full or until you are out of tortillas. 10-12 medium flour tortillas should cover an entire 9x13 pan.",
+      "15": "Drizzle your cheese sauce over the tops of your assembled enchiladas, making sure to cover them moderately, but not drown them. Follow that with a drizzle of your sauce, and sprinkle more of the shredded mild cheddar to your liking.",
+      "16": "Cover your 9x13 pan with aluminum foil and bake at 350°F for about 20-25 minutes or until the cheese is melted and bubbly, just before it turns brown."
+    },
+    "image": "https://images.unsplash.com/photo-1534352956036-cd81e27dd615?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1001&q=80",
+    "inactive": false,
+    "chef": "John",
+    "tags": ["enchiladas", "mexican", "chicken"],
+    "createdAt": "2022-01-01T00:00:00.000Z",
+    "updatedAt": "2022-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 3,
     "title": "Classic Grilled Cheese",
-    "description": "An American clasic! Two slices of bread toasted around a slice of melted American cheese!",
-    "global": true,
-    "active": true,
-    "category": "Sandwiches",
     "slug": "classic-grilled-cheese",
-    "picture": "https://images.unsplash.com/photo-1634598604019-7fca68ad3b8e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1035&q=80",
-    "profiles": {
-      "username": "John"
+    "description": "An American clasic! Two slices of bread toasted around a slice of melted American cheese!",
+    "category": "Sandwiches",
+    "ingredients": {
+      "1": "2 Slices of American Cheese",
+      "2": "2 Slices of White Bread",
+      "3": "1 Tbsp Butter"
     },
-    "ingredients": [
-      {
-        "id": 5,
-        "ingredient": "Slice of American Cheese",
-        "amount": "1"
-      },
-      {
-        "id": 4,
-        "ingredient": "Slices of White Bread",
-        "amount": "2"
-      },
-      {
-        "id": 6,
-        "ingredient": "Tbsp Butter",
-        "amount": "1"
-      }
-    ],
-    "instructions": [
-      {
-        "id": 2,
-        "heading": null,
-        "description": "Heat a medium-sized frying pan on low-medium heat."
-      },
-      {
-        "id": 7,
-        "heading": null,
-        "description": "Carefully flip the sandwich and cook the other side for 2-4 minutes until golden brown or until your preferred level of crispiness has been achieved."
-      },
-      {
-        "id": 6,
-        "heading": null,
-        "description": "Place the cheese sandwich in the pan, and let it cook for 2-4 minutes until golden brown or until your preferred level of crispiness has been achieved."
-      },
-      {
-        "id": 8,
-        "heading": null,
-        "description": "Once both sides are crispy to your liking, transfer to a plate to serve and enjoy!"
-      },
-      {
-        "id": 3,
-        "heading": null,
-        "description": "Spread a layer of butter over one side of 2 slices of bread."
-      },
-      {
-        "id": 5,
-        "heading": null,
-        "description": "Place the remaining slice of bread on top of the cheese, butter side up. The butter should be on the outside of this cheese sandwich."
-      },
-      {
-        "id": 4,
-        "heading": null,
-        "description": "Place 1 slice of American cheese on top of the unbuttered side of 1 slice of the bread"
-      }
-    ]
+    "instructions": {
+      "1": "Heat a medium-sized frying pan on low-medium heat.",
+      "2": "Spread a layer of butter over one side of 2 slices of bread.",
+      "3": "Place 2 slices of American cheese on top of the unbuttered side of 1 slice of the bread",
+      "4": "Place the remaining slice of bread on top of the cheese, butter side up. The butter should be on the outside of this cheese sandwich.",
+      "5": "Place the cheese sandwich in the pan, and let it cook for 2-4 minutes until golden brown or until your preferred level of crispiness has been achieved.",
+      "6": "Carefully flip the sandwich and cook the other side for 2-4 minutes until golden brown or until your preferred level of crispiness has been achieved.",
+      "7": "Once both sides are crispy to your liking, transfer to a plate to serve and enjoy!"
+    },
+    "image": "https://images.unsplash.com/photo-1634598604019-7fca68ad3b8e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1035&q=80",
+    "inactive": false,
+    "chef": "John",
+    "tags": ["grilled cheese", "sandwich", "american"],
+    "createdAt": "2022-01-01T00:00:00.000Z",
+    "updatedAt": "2022-01-01T00:00:00.000Z"
   },
   {
-    "id": 7,
+    "id": 4,
     "title": "Orange Zest Blueberry Pie",
-    "description": "This delicious blueberry pie will leave you wondering why you never tried it before! Inspired by MasterChef Season 5 Contestant Jaimee Vitolo, the orange zest and liqueur adds a nice contrast to the sweet blueberries!",
-    "global": true,
-    "active": true,
-    "category": "Desserts",
     "slug": "orange-zest-blueberry-pie",
-    "picture": "https://images.unsplash.com/photo-1619051965508-0872c572ee34?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1364&q=80",
-    "profiles": {
-      "username": "John"
+    "description": "This delicious blueberry pie will leave you wondering why you never tried it before! Inspired by MasterChef Season 5 Contestant Jaimee Vitolo, the orange zest and liqueur adds a nice contrast to the sweet blueberries!",
+    "category": "Desserts",
+    "ingredients": {
+      "1": "2 1/2 cups All Purpose Flour",
+      "2": "1 tsp. Salt",
+      "3": "1 tsp. Cinnamon",
+      "4": "1/4 tsp. Allspice",
+      "5": "1/4 tsp. Ground Ginger",
+      "6": "2 Tbsp. Sugar",
+      "7": "1/4 cup Shortening, Cold",
+      "8": "1/4 cup Water, cold",
+      "9": "1/2 cup Butter, Cold",
+      "10": "3 Tbsp Sour Cream",
+      "11": "5 cups Fresh Blueberries",
+      "12": "1/2 cup Sugar",
+      "13": "Zest and Juice of One Orange",
+      "14": "1/4 cup Flour",
+      "15": "1 Tbsp. Orange Liqueur",
+      "16": "1 tsp. Orange Blossom Water",
+      "17": "1/4 tsp. Salt"
     },
-    "ingredients": [
-      {
-        "id": 63,
-        "ingredient": "cup Butter, Cold",
-        "amount": "1/2"
-      },
-      {
-        "id": 64,
-        "ingredient": "Tbsp Sour Cream",
-        "amount": "3"
-      },
-      {
-        "id": 66,
-        "ingredient": "Pie Filling: ",
-        "amount": ""
-      },
-      {
-        "id": 67,
-        "ingredient": "cups Fresh Blueberries",
-        "amount": "5"
-      },
-      {
-        "id": 68,
-        "ingredient": "cup Sugar",
-        "amount": "1/2"
-      },
-      {
-        "id": 69,
-        "ingredient": "Zest and Juice of One Orange",
-        "amount": "1"
-      },
-      {
-        "id": 70,
-        "ingredient": "cup Flour",
-        "amount": "1/4"
-      },
-      {
-        "id": 84,
-        "ingredient": "Tbsp. Orange Liqueur",
-        "amount": "1"
-      },
-      {
-        "id": 85,
-        "ingredient": "tsp. Orange Blossom Water",
-        "amount": "1"
-      },
-      {
-        "id": 86,
-        "ingredient": "tsp. Salt",
-        "amount": "1/4"
-      },
-      {
-        "id": 54,
-        "ingredient": "Pie Crust: ",
-        "amount": ""
-      },
-      {
-        "id": 55,
-        "ingredient": "cups All Purpose Flour",
-        "amount": "2 1/2"
-      },
-      {
-        "id": 56,
-        "ingredient": "tsp. Salt",
-        "amount": "1"
-      },
-      {
-        "id": 57,
-        "ingredient": "tsp. Cinnamon",
-        "amount": "1"
-      },
-      {
-        "id": 58,
-        "ingredient": "tsp. Allspice",
-        "amount": "1/4"
-      },
-      {
-        "id": 59,
-        "ingredient": "tsp. Ground Ginger",
-        "amount": "1/4"
-      },
-      {
-        "id": 60,
-        "ingredient": "Tbsp. Sugar",
-        "amount": "2"
-      },
-      {
-        "id": 61,
-        "ingredient": "cup Shortening, Cold",
-        "amount": "1/4"
-      },
-      {
-        "id": 62,
-        "ingredient": "cup Water, cold",
-        "amount": "1/4"
-      }
-    ],
-    "instructions": [
-      {
-        "id": 45,
-        "heading": null,
-        "description": "Transfer the blueberry filling to the pie dish lined with dough. Arrange the dough strips on top of the filling to form a lattice. Trim the excess dough. Fold the bottom crust over the ends of the strips and crimp to seal."
-      },
-      {
-        "id": 46,
-        "heading": null,
-        "description": "Place the pie on a baking sheet and bake for approximately 1 hour until the crust is golden.\nCool to room temperature and serve.\n"
-      },
-      {
-        "id": 47,
-        "heading": "Yeild:",
-        "description": "1 (9inch) pie"
-      },
-      {
-        "id": 34,
-        "heading": "",
-        "description": "Preheat the oven to 375°F."
-      },
-      {
-        "id": 36,
-        "heading": "For the Pie Crust: ",
-        "description": "Mix the dry ingredients in a large bowl. Using a pastry cutter, cut in the butter and shortening until the mixture resembles coarse meal. "
-      },
-      {
-        "id": 37,
-        "heading": null,
-        "description": "In a separate bowl whisk together the egg, sour cream and water. Make a well in the center of the flour mixture and pour in the wet ingredients. Slowly incorporate the two together until the dough comes together. "
-      },
-      {
-        "id": 38,
-        "heading": null,
-        "description": "Divide the dough into two discs and cover in plastic wrap. Refrigerate for 15 minutes."
-      },
-      {
-        "id": 43,
-        "heading": "Assembly:",
-        "description": "On a floured work surface roll out the first disc of dough into a 12 inch round. Transfer to a 9-inch pie dish. Trim the dough so there is only a ½ inch overhang.\n\n"
-      },
-      {
-        "id": 41,
-        "heading": "For the Filling:",
-        "description": "In a large bowl, toss the blueberries with the dry ingredients. Add in the wet ingredients and mix to combine.\n\n"
-      }
-    ]
+    "instructions": {
+      "1": "Preheat the oven to 375°F.",
+      "2": "Mix the dry ingredients in a large bowl. Using a pastry cutter, cut in the butter and shortening until the mixture resembles coarse meal. ",
+      "3": "In a separate bowl whisk together the egg, sour cream and water. Make a well in the center of the flour mixture and pour in the wet ingredients. Slowly incorporate the two together until the dough comes together. ",
+      "4": "Divide the dough into two discs and cover in plastic wrap. Refrigerate for 15 minutes.",
+      "5": "In a large bowl, toss the blueberries with the dry ingredients. Add in the wet ingredients and mix to combine.\n\n",
+      "6": "On a floured work surface roll out the first disc of dough into a 12 inch round. Transfer to a 9-inch pie dish. Trim the dough so there is only a ½ inch overhang.\n\n",
+      "7": "Transfer the blueberry filling to the pie dish lined with dough. Arrange the dough strips on top of the filling to form a lattice. Trim the excess dough. Fold the bottom crust over the ends of the strips and crimp to seal.",
+      "8": "Place the pie on a baking sheet and bake for approximately 1 hour until the crust is golden.\nCool to room temperature and serve.\n",
+      "9": "Yeild: 1 (9inch) pie"
+    },
+    "image": "https://images.unsplash.com/photo-1619051965508-0872c572ee34?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1364&q=80",
+    "inactive": false,
+    "chef": "John",
+    "tags": ["blueberry", "pie", "blueberries", "orange", "orange zest", "dessert"],
+    "createdAt": "2022-01-01T00:00:00.000Z",
+    "updatedAt": "2022-01-01T00:00:00.000Z"
   },
   {
-    "id": 18,
+    "id": 5,
     "title": "The Best Sweet Potato Casserole",
-    "description": "This sweet potato casserole is sprinkled with a nutty crumb topping to create a pleasantly crunchy contrast to the creamy and soft mashed sweet potatoes down below. The filling gets an extra special pumpkin pie(ish) treatment with brown sugar and vanilla for a deep caramel flavor.",
-    "global": true,
-    "active": true,
-    "category": "Sides",
     "slug": "best-sweet-potato-casserole",
-    "picture": "https://images.unsplash.com/photo-1576087171302-0a4d84681c40?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2252&q=80",
-    "profiles": {
-      "username": "Becky"
+    "description": "This sweet potato casserole is sprinkled with a nutty crumb topping to create a pleasantly crunchy contrast to the creamy and soft mashed sweet potatoes down below. The filling gets an extra special pumpkin pie(ish) treatment with brown sugar and vanilla for a deep caramel flavor.",
+    "category": "Sides",
+    "ingredients": {
+      "1": "1/2 stick (4 Tbsp) unsalted butter - melted + more for buttering the dish",
+      "2": "3-4 Large Sweet Potatoes, peeled and cubed (about 1 3/4 pounds)",
+      "3": "1/2 cup milk",
+      "4": "1/4 cup brown sugar, packed",
+      "5": "1 tsp pure vanilla extract",
+      "6": "1/2 tsp kosher salt",
+      "7": "2 large eggs",
+      "8": "1/2 cup all-purpose flour",
+      "9": "1/2 cup brown sugar, packed",
+      "10": "1/2 stick (4 Tbsp) unsalted butter, melted",
+      "11": "1/4 tsp kosher salt",
+      "12": "3/4 cup chopped pecans"
     },
-    "ingredients": [
-      {
-        "id": 124,
-        "ingredient": "Filling:",
-        "amount": ""
-      },
-      {
-        "id": 125,
-        "ingredient": "stick (4 Tbsp) unsalted butter - melted + more for buttering the dish",
-        "amount": "1/2"
-      },
-      {
-        "id": 126,
-        "ingredient": "Large Sweet Potatoes, peeled and cubed (about 1 3/4 pounds)",
-        "amount": "3-4"
-      },
-      {
-        "id": 127,
-        "ingredient": "cup milk",
-        "amount": "1/2"
-      },
-      {
-        "id": 128,
-        "ingredient": "cup brown sugar, packed",
-        "amount": "1/4"
-      },
-      {
-        "id": 129,
-        "ingredient": "tsp pure vanilla extract",
-        "amount": "1"
-      },
-      {
-        "id": 130,
-        "ingredient": "tsp kosher salt",
-        "amount": "1/2"
-      },
-      {
-        "id": 131,
-        "ingredient": "large eggs",
-        "amount": "2"
-      },
-      {
-        "id": 132,
-        "ingredient": "Topping: ",
-        "amount": ""
-      },
-      {
-        "id": 133,
-        "ingredient": "cup all-purpose flour",
-        "amount": "1/2"
-      },
-      {
-        "id": 134,
-        "ingredient": "cup brown sugar, packed",
-        "amount": "1/2"
-      },
-      {
-        "id": 135,
-        "ingredient": "stick (4 Tbsp) unsalted butter, melted",
-        "amount": "1/2"
-      },
-      {
-        "id": 136,
-        "ingredient": "tsp kosher salt",
-        "amount": "1/4"
-      },
-      {
-        "id": 137,
-        "ingredient": "cup chopped pecans",
-        "amount": "3/4"
-      }
-    ],
-    "instructions": [
-      {
-        "id": 69,
-        "heading": "For the sweet potatoes: ",
-        "description": "Add 1 3/4 pounds peeled and cubed sweet potatoes to a large pot of salted water. Bring to a boil over high heat, then lower the heat to a simmer and cook until the potatoes are very tender, 15 to 20 minutes. Drain and cool. Mash the sweet potatoes."
-      },
-      {
-        "id": 70,
-        "heading": "For the filling: ",
-        "description": "Preheat the oven to 350 degrees F. Butter a 2-quart baking dish. \n\nWhisk together the butter, mashed potatoes, milk, brown sugar, vanilla, salt and eggs in a large bowl. Transfer to the prepared baking dish"
-      },
-      {
-        "id": 71,
-        "heading": "For the topping: ",
-        "description": "Combine the flour, brown sugar, butter and salt in a medium bowl until moist and the mixture clumps together. Stir in the pecans. Sprinkle the mixture over the top of the sweet potatoes in an even layer. Bake until mostly set in the center and golden on top, 25-30 minutes. Serve hot."
-      },
-      {
-        "id": 68,
-        "heading": "Special Equipment:",
-        "description": "2 Quart Baking Dish"
-      }
-    ]
+    "instructions": {
+      "1": "For the sweet potatoes: Add 1 3/4 pounds peeled and cubed sweet potatoes to a large pot of salted water. Bring to a boil over high heat, then lower the heat to a simmer and cook until the potatoes are very tender, 15 to 20 minutes. Drain and cool. Mash the sweet potatoes.",
+      "2": "For the filling: Preheat the oven to 350 degrees F. Butter a 2-quart baking dish. \n\nWhisk together the butter, mashed potatoes, milk, brown sugar, vanilla, salt and eggs in a large bowl. Transfer to the prepared baking dish",
+      "3": "For the topping: Combine the flour, brown sugar, butter and salt in a medium bowl until moist and the mixture clumps together. Stir in the pecans. Sprinkle the mixture over the top of the sweet potatoes in an even layer. Bake until mostly set in the center and golden on top, 25-30 minutes. Serve hot.",
+      "4": "Special Equipment: 2 Quart Baking Dish"
+    },
+    "image": "https://images.unsplash.com/photo-1576087171302-0a4d84681c40?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2252&q=80",
+    "inactive": false,
+    "chef": "Becky",
+    "tags": ["sides", "sweet potato", "casserole", "holiday"],
+    "createdAt": "2022-01-01T00:00:00.000Z",
+    "updatedAt": "2022-01-01T00:00:00.000Z"
   }
 ]
