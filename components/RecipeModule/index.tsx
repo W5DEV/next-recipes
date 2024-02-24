@@ -1,16 +1,23 @@
-/* eslint-disable @typescript-eslint/no-unsafe-assignment */
 'use client';
-import Recipes from '../../../data/recipes.json';
-import { usePathname } from 'next/navigation';
+interface iRecipeModuleProps {
+  recipe: {
+    id: number;
+    title: string;
+    slug: string;
+    description: string;
+    category: string;
+    ingredients: string[];
+    instructions: string[];
+    image: string;
+    inactive: boolean;
+    chef: string;
+    tags: string[];
+    createdAt: string;
+    updatedAt: string;
+  };
+}
 
-export default function RecipeModule() {
-  const pathname = usePathname();
-  const recipeSlug = pathname.split('/')[2];
-  const recipe = Recipes.find((targetRecipe) => {
-    if (targetRecipe.slug == recipeSlug) {
-      return targetRecipe;
-    }
-  });
+export default function RecipeModule({ recipe }: iRecipeModuleProps) {
   const ingredients = recipe && recipe.ingredients;
   const instructions = recipe && recipe.instructions;
 
@@ -64,11 +71,13 @@ export default function RecipeModule() {
             {/* Product image */}
             <div className='lg:col-span-4 lg:row-end-1'>
               <div className='overflow-hidden bg-gray-100 rounded-lg aspect-h-3 aspect-w-4'>
-                <img
-                  src={recipe.image}
-                  alt={recipe.slug}
-                  className='hidden object-cover object-center lg:block'
-                />
+                <picture>
+                  <img
+                    src={recipe.image}
+                    alt={recipe.slug}
+                    className='hidden object-cover object-center lg:block'
+                  />
+                </picture>
               </div>
             </div>
 
@@ -84,11 +93,13 @@ export default function RecipeModule() {
               </div>
 
               <p className='mt-6 text-gray-500'>{recipe.description}</p>
-              <img
-                src={recipe.image}
-                alt={recipe.slug}
-                className='block w-full mt-8 rounded-lg lg:hidden lg:h-auto'
-              />
+              <picture>
+                <img
+                  src={recipe.image}
+                  alt={recipe.slug}
+                  className='block w-full mt-8 rounded-lg lg:hidden lg:h-auto'
+                />
+              </picture>
 
               <div className='pt-4 border-t border-gray-200'>
                 <div className='mt-4 prose-sm prose text-gray-500'>
@@ -107,11 +118,11 @@ export default function RecipeModule() {
 
           <div className='w-full max-w-2xl px-4 mx-auto mt-16 lg:col-span-4 lg:mt-0 lg:max-w-none sm:px-0 lg:px-12'>
             <h3 className='pb-4 text-2xl font-bold text-gray-900'>Instructions:</h3>
-            <ul className='list-decimal list-inside'>
+            <ul className='list-decimal'>
               {instructions &&
-                Object.entries(instructions).map((instruction) => (
+                instructions.map((instruction, index) => (
                   <li key={Math.random()} className='flex flex-col py-2 text-gray-500'>
-                    {instruction[0]}. {instruction[1]}
+                    {index}. {instruction}
                   </li>
                 ))}
             </ul>
