@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unsafe-assignment */
 import Recipes from '../../../data/recipes.json';
 import Image from 'next/image';
 
@@ -34,7 +35,7 @@ export default function Example() {
         />
       </svg>
       <div
-        className='absolute left-1/2 right-0 top-0 -z-10 -ml-24 transform-gpu overflow-hidden blur-3xl lg:ml-24 xl:ml-48'
+        className='absolute top-0 right-0 -ml-24 overflow-hidden left-1/2 -z-10 transform-gpu blur-3xl lg:ml-24 xl:ml-48'
         aria-hidden='true'
       >
         <div
@@ -45,8 +46,8 @@ export default function Example() {
           }}
         />
       </div>
-      <div className='mx-auto max-w-7xl px-6 lg:px-8 py-24'>
-        <div className='mx-auto max-w-2xl text-center'>
+      <div className='px-6 py-24 mx-auto max-w-7xl lg:px-8'>
+        <div className='max-w-2xl mx-auto text-center'>
           <h2 className='text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl'>
             A taste of the app
           </h2>
@@ -68,7 +69,7 @@ export default function Example() {
                       <Image
                         fill
                         quality={25}
-                        src={recipe.picture}
+                        src={recipe.image}
                         alt=''
                         className='object-cover object-center w-full h-full'
                       />
@@ -77,9 +78,9 @@ export default function Example() {
                       aria-hidden='true'
                       className='absolute inset-x-0 bottom-0 opacity-50 h-2/3 bg-gradient-to-t from-gray-800'
                     />
-                    <div className='relative mt-auto flex flex-col'>
+                    <div className='relative flex flex-col mt-auto'>
                       <span className='text-lg font-bold text-left text-white'>{recipe.title}</span>
-                      <span className='text-sm mt-2 italic text-left text-white'>
+                      <span className='mt-2 text-sm italic text-left text-white'>
                         {recipe.category}
                       </span>
                     </div>

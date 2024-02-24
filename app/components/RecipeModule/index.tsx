@@ -11,8 +11,8 @@ export default function RecipeModule() {
       return targetRecipe;
     }
   });
-  const ingredients = recipe && recipe.ingredients.sort((a, b) => (a.id > b.id ? 1 : -1));
-  const instructions = recipe && recipe.instructions.sort((a, b) => (a.id > b.id ? 1 : -1));
+  const ingredients = recipe && recipe.ingredients;
+  const instructions = recipe && recipe.instructions;
 
   return (
     <div className='relative isolate'>
@@ -46,7 +46,7 @@ export default function RecipeModule() {
         />
       </svg>
       <div
-        className='absolute left-1/2 right-0 top-0 -z-10 -ml-24 transform-gpu overflow-hidden blur-3xl lg:ml-24 xl:ml-48'
+        className='absolute top-0 right-0 -ml-24 overflow-hidden left-1/2 -z-10 transform-gpu blur-3xl lg:ml-24 xl:ml-48'
         aria-hidden='true'
       >
         <div
@@ -58,50 +58,45 @@ export default function RecipeModule() {
         />
       </div>
       {recipe && (
-        <main className='mx-auto px-4 pb-24 pt-14 sm:px-6 sm:pb-32 sm:pt-16 lg:max-w-7xl lg:px-8'>
+        <main className='px-4 pb-24 mx-auto pt-14 sm:px-6 sm:pb-32 sm:pt-16 lg:max-w-7xl lg:px-8'>
           {/* Product */}
           <div className='lg:grid lg:grid-cols-7 lg:grid-rows-1 lg:gap-x-8 lg:gap-y-10 xl:gap-x-16'>
             {/* Product image */}
             <div className='lg:col-span-4 lg:row-end-1'>
-              <div className='aspect-h-3 aspect-w-4 overflow-hidden rounded-lg bg-gray-100'>
+              <div className='overflow-hidden bg-gray-100 rounded-lg aspect-h-3 aspect-w-4'>
                 <img
-                  src={recipe.picture}
+                  src={recipe.image}
                   alt={recipe.slug}
-                  className='object-cover object-center hidden lg:block'
+                  className='hidden object-cover object-center lg:block'
                 />
               </div>
             </div>
 
             {/* Product details */}
-            <div className='mx-auto mt-14 max-w-2xl sm:mt-16 lg:col-span-3 lg:row-span-2 lg:row-end-2 lg:mt-0 lg:max-w-none px-4 sm:px-0'>
+            <div className='max-w-2xl px-4 mx-auto mt-14 sm:mt-16 lg:col-span-3 lg:row-span-2 lg:row-end-2 lg:mt-0 lg:max-w-none sm:px-0'>
               <div className='flex flex-col-reverse'>
                 <div className='mt-4'>
                   <h1 className='text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl'>
                     {recipe.title}
                   </h1>
-                  <p className='mt-2 text-sm text-gray-500'>Chef: {recipe.profiles.username}</p>
+                  <p className='mt-2 text-sm text-gray-500'>Chef: {recipe.chef}</p>
                 </div>
               </div>
 
               <p className='mt-6 text-gray-500'>{recipe.description}</p>
               <img
-                src={recipe.picture}
+                src={recipe.image}
                 alt={recipe.slug}
-                className='block lg:hidden w-full lg:h-auto rounded-lg mt-8'
+                className='block w-full mt-8 rounded-lg lg:hidden lg:h-auto'
               />
 
-              <div className='border-t border-gray-200 pt-4'>
-                <div className='prose prose-sm mt-4 text-gray-500'>
+              <div className='pt-4 border-t border-gray-200'>
+                <div className='mt-4 prose-sm prose text-gray-500'>
                   <ul role='list'>
                     {ingredients &&
-                      ingredients.map((ingredient) => (
-                        <li
-                          key={ingredient.id}
-                          className={
-                            ingredient.amount === '' ? 'font-semibold pt-4 pb-2 -ml-2' : ''
-                          }
-                        >
-                          {ingredient.amount} {ingredient.ingredient}
+                      Object.values(ingredients).map((ingredient) => (
+                        <li key={Math.random()} className='flex flex-col py-2 text-gray-500'>
+                          {ingredient}
                         </li>
                       ))}
                   </ul>
@@ -110,16 +105,13 @@ export default function RecipeModule() {
             </div>
           </div>
 
-          <div className='mx-auto mt-16 w-full max-w-2xl lg:col-span-4 lg:mt-0 lg:max-w-none px-4 sm:px-0 lg:px-12'>
-            <h3 className='text-2xl font-bold text-gray-900 pb-4'>Instructions:</h3>
-            <ul role='list'>
+          <div className='w-full max-w-2xl px-4 mx-auto mt-16 lg:col-span-4 lg:mt-0 lg:max-w-none sm:px-0 lg:px-12'>
+            <h3 className='pb-4 text-2xl font-bold text-gray-900'>Instructions:</h3>
+            <ul className='list-decimal list-inside'>
               {instructions &&
-                instructions.map((instruction) => (
-                  <li key={instruction.id} className='py-2 flex flex-col'>
-                    {instruction.heading && (
-                      <span className='font-bold pb-2 text-gray-500'>{instruction.heading}</span>
-                    )}
-                    <span className='text-gray-500'>{instruction.description}</span>
+                Object.entries(instructions).map((instruction) => (
+                  <li key={Math.random()} className='flex flex-col py-2 text-gray-500'>
+                    {instruction[0]}. {instruction[1]}
                   </li>
                 ))}
             </ul>
