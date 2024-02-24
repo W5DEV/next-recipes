@@ -1,6 +1,7 @@
-/* eslint-disable no-console */
 /* eslint-disable @typescript-eslint/no-unsafe-return */
 /* eslint-disable @typescript-eslint/no-explicit-any */
+'use server';
+
 import axios from 'axios';
 
 const apiUrl = process.env.REACT_APP_API_URL;
