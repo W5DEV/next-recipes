@@ -1,6 +1,25 @@
+/* eslint-disable @typescript-eslint/no-misused-promises */
+/* eslint-disable @typescript-eslint/no-unsafe-assignment */
+/* eslint-disable @typescript-eslint/no-unsafe-member-access */
+'use client';
+import { UserLogin } from '@/api';
 import Logo from '@/components/Logo';
+import { useRouter } from 'next/navigation';
 
 export default function LoginForm() {
+  const router = useRouter();
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    const email = e.currentTarget.email.value as string;
+    const password = e.currentTarget.password.value as string;
+    const res = await UserLogin(email, password);
+    if (res === 'success') {
+      router.push('/admin');
+    } else {
+      alert('Invalid credentials. Please try again.');
+    }
+  };
+
   return (
     <>
       <div className='flex flex-col justify-center flex-1 px-6 py-12 lg:px-8'>
@@ -12,7 +31,7 @@ export default function LoginForm() {
         </div>
 
         <div className='mt-10 sm:mx-auto sm:w-full sm:max-w-sm'>
-          <form className='space-y-6' action='#' method='POST'>
+          <form className='space-y-6' onSubmit={async (e) => handleSubmit(e)} method='POST'>
             <div>
               <label htmlFor='email' className='block text-sm font-medium leading-6 text-gray-900'>
                 Email address

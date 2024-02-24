@@ -36,8 +36,8 @@ The frontend utilizes Next.js as the framework, with Tailwind CSS for styling.
 
 ## To-Do (Phase 1)
 
-1. Rework data structure on front-end to meet requirements of new backend.
-2. Implement authentication and access to the dashboard.
+1. ~~Rework data structure on front-end to meet requirements of new backend.~~
+2. ~~Implement authentication and access to the dashboard.~~
 3. Create a recipe dashboard that shows all recipes in the database.
 4. Implement the ability to add new recipes and edit existing recipes.
 5. Figure out recipe image handling. (This may be a phase 2 feature)

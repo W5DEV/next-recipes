@@ -26,7 +26,7 @@ function classNames(...classes: string[]) {
   return classes.filter(Boolean).join(' ');
 }
 
-export default function Dashboard({ children }: { children: React.ReactNode }) {
+export default function Dashboard({ children, name }: { children: React.ReactNode; name: string }) {
   return (
     <>
       <div className='min-h-full'>
@@ -41,11 +41,13 @@ export default function Dashboard({ children }: { children: React.ReactNode }) {
                   <div className='relative flex items-center justify-between h-16 lg:border-b lg:border-cyan-400 lg:border-opacity-25'>
                     <div className='flex items-center px-2 lg:px-0'>
                       <div className='flex-shrink-0'>
-                        <img
-                          className='block w-8 h-8'
-                          src='https://tailwindui.com/img/logos/mark.svg?color=cyan&shade=400'
-                          alt='Your Company'
-                        />
+                        <picture>
+                          <img
+                            className='block w-8 h-8'
+                            src='https://tailwindui.com/img/logos/mark.svg?color=cyan&shade=400'
+                            alt='Your Company'
+                          />
+                        </picture>
                       </div>
                       <div className='hidden lg:ml-10 lg:block'>
                         <div className='flex space-x-4'>
@@ -115,7 +117,9 @@ export default function Dashboard({ children }: { children: React.ReactNode }) {
                             <Menu.Button className='relative flex text-sm text-white rounded-full bg-cyan-600 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-cyan-600'>
                               <span className='absolute -inset-1.5' />
                               <span className='sr-only'>Open user menu</span>
-                              <img className='w-8 h-8 rounded-full' src={user.imageUrl} alt='' />
+                              <picture>
+                                <img className='w-8 h-8 rounded-full' src={user.imageUrl} alt='' />
+                              </picture>
                             </Menu.Button>
                           </div>
                           <Transition
@@ -173,7 +177,9 @@ export default function Dashboard({ children }: { children: React.ReactNode }) {
                   <div className='pt-4 pb-3 border-t border-cyan-700'>
                     <div className='flex items-center px-5'>
                       <div className='flex-shrink-0'>
-                        <img className='w-10 h-10 rounded-full' src={user.imageUrl} alt='' />
+                        <picture>
+                          <img className='w-10 h-10 rounded-full' src={user.imageUrl} alt='' />
+                        </picture>
                       </div>
                       <div className='ml-3'>
                         <div className='text-base font-medium text-white'>{user.name}</div>
@@ -207,7 +213,13 @@ export default function Dashboard({ children }: { children: React.ReactNode }) {
           </Disclosure>
           <header className='py-10'>
             <div className='px-4 mx-auto max-w-7xl sm:px-6 lg:px-8'>
-              <h1 className='text-3xl font-bold tracking-tight text-white'>Dashboard</h1>
+              {name ? (
+                <h1 className='text-3xl font-bold tracking-tight text-white'>
+                  {name}&apos;s Dashboard
+                </h1>
+              ) : (
+                <span className='text-3xl font-bold tracking-tight text-white'>Dashboard</span>
+              )}
             </div>
           </header>
         </div>
