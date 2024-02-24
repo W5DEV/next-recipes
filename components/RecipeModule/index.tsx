@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-unsafe-assignment */
 'use client';
-import Recipes from '../../../data/recipes.json';
+import Recipes from '../../data/recipes.json';
 import { usePathname } from 'next/navigation';
 
 export default function RecipeModule() {

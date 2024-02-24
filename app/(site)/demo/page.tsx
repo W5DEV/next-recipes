@@ -1,11 +1,11 @@
-import FeaturedRecipes from '@/app/components/FeaturedRecipes';
-import CTA from '@/app/components/CTA';
+import FeaturedRecipes from '@/components/FeaturedRecipes';
+import CTA from '@/components/CTA';
 
 export default function Demo() {
   return (
-    <main>
+    <div className='w-full h-full'>
       <FeaturedRecipes />
       <CTA />
-    </main>
+    </div>
   );
 }
