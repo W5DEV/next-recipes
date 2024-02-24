@@ -70,11 +70,13 @@ export default function RecipeModule(props: { recipe: iRecipe }) {
             {/* Product image */}
             <div className='lg:col-span-4 lg:row-end-1'>
               <div className='overflow-hidden bg-gray-100 rounded-lg aspect-h-3 aspect-w-4'>
-                <img
-                  src={recipe.image}
-                  alt={recipe.slug}
-                  className='hidden object-cover object-center lg:block'
-                />
+                <picture>
+                  <img
+                    src={recipe.image}
+                    alt={recipe.slug}
+                    className='hidden object-cover object-center lg:block'
+                  />
+                </picture>
               </div>
             </div>
 
@@ -90,11 +92,13 @@ export default function RecipeModule(props: { recipe: iRecipe }) {
               </div>
 
               <p className='mt-6 text-gray-500'>{recipe.description}</p>
-              <img
-                src={recipe.image}
-                alt={recipe.slug}
-                className='block w-full mt-8 rounded-lg lg:hidden lg:h-auto'
-              />
+              <picture>
+                <img
+                  src={recipe.image}
+                  alt={recipe.slug}
+                  className='block w-full mt-8 rounded-lg lg:hidden lg:h-auto'
+                />
+              </picture>
 
               <div className='pt-4 border-t border-gray-200'>
                 <div className='mt-4 prose-sm prose text-gray-500'>
