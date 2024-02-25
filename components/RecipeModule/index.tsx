@@ -1,20 +1,9 @@
 'use client';
+
+import type { iRecipe } from '@/api';
+
 interface iRecipeModuleProps {
-  recipe: {
-    id: number;
-    title: string;
-    slug: string;
-    description: string;
-    category: string;
-    ingredients: string[];
-    instructions: string[];
-    image: string;
-    inactive: boolean;
-    chef: string;
-    tags: string[];
-    createdAt: string;
-    updatedAt: string;
-  };
+  recipe: iRecipe;
 }
 
 export default function RecipeModule({ recipe }: iRecipeModuleProps) {
@@ -93,13 +82,15 @@ export default function RecipeModule({ recipe }: iRecipeModuleProps) {
               </div>
 
               <p className='mt-6 text-gray-500'>{recipe.description}</p>
-              <picture>
-                <img
-                  src={recipe.image}
-                  alt={recipe.slug}
-                  className='block w-full mt-8 rounded-lg lg:hidden lg:h-auto'
-                />
-              </picture>
+              {recipe.image && (
+                <picture>
+                  <img
+                    src={recipe.image}
+                    alt={recipe.slug}
+                    className='block w-full mt-8 rounded-lg lg:hidden lg:h-auto'
+                  />
+                </picture>
+              )}
 
               <div className='pt-4 border-t border-gray-200'>
                 <div className='mt-4 prose-sm prose text-gray-500'>
@@ -122,7 +113,7 @@ export default function RecipeModule({ recipe }: iRecipeModuleProps) {
               {instructions &&
                 instructions.map((instruction, index) => (
                   <li key={Math.random()} className='flex flex-col py-2 text-gray-500'>
-                    {index}. {instruction}
+                    {index + 1}. {instruction}
                   </li>
                 ))}
             </ul>

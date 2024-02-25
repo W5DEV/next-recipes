@@ -42,7 +42,7 @@ export interface iRecipe {
   updated_at: string;
 }
 
-interface iAllRecipes {
+export interface iAllRecipes {
   data?: iRecipe[];
   results?: number;
   message?: string;
@@ -139,7 +139,8 @@ export const GetRecipeById = async (id: string): Promise<any> => {
     const response = await axios.get(`${apiUrl}/recipes/${id}`, {
       headers: { Authorization: `Bearer ${token.value}` },
     });
-    return response.data;
+    const responseData = response.data as iAllRecipes;
+    return responseData;
   } catch (e) {
     const error = e as AxiosError;
     return error;

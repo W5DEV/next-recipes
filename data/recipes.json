@@ -1,6 +1,6 @@
 [
   {
-    "id": 1,
+    "id": "1",
     "title": "6 Pepper Chili",
     "slug": "6-pepper-chili",
     "description": "Delicious chili made with dried pasilla, arbol, chipotle, guajillo, ancho and casabel chilis!",
@@ -41,14 +41,13 @@
       "Bring to a bare-simmer and let simmer for 2-3 hours or until the beans and beef are tender and the chili has thickened. (You can also do this in a 300 degree oven, with the lid slightly ajar from the pot)."
     ],
     "image": "https://images.unsplash.com/photo-1638329389022-daef2efb71b3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1035&q=80",
-    "inactive": false,
     "chef": "John",
     "tags": ["chili", "spicy", "beef", "beans"],
-    "createdAt": "2022-01-01T00:00:00.000Z",
-    "updatedAt": "2022-01-01T00:00:00.000Z"
+    "created_at": "2022-01-01T00:00:00.000Z",
+    "updated_at": "2022-01-01T00:00:00.000Z"
   },
   {
-    "id": 2,
+    "id": "2",
     "title": "Authentic Chicken Enchiladas",
     "slug": "authentic-chicken-enchiladas",
     "description": "These chicken enchiladas are sure to be crowd pleasers! Made with dried chiles and filled with juicy all white meat chicken, you are sure to leave your guests wishing they had more!",
@@ -93,14 +92,13 @@
       "Cover your 9x13 pan with aluminum foil and bake at 350°F for about 20-25 minutes or until the cheese is melted and bubbly, just before it turns brown."
     ],
     "image": "https://images.unsplash.com/photo-1534352956036-cd81e27dd615?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1001&q=80",
-    "inactive": false,
     "chef": "John",
     "tags": ["enchiladas", "mexican", "chicken"],
-    "createdAt": "2022-01-01T00:00:00.000Z",
-    "updatedAt": "2022-01-01T00:00:00.000Z"
+    "created_at": "2022-01-01T00:00:00.000Z",
+    "updated_at": "2022-01-01T00:00:00.000Z"
   },
   {
-    "id": 3,
+    "id": "3",
     "title": "Classic Grilled Cheese",
     "slug": "classic-grilled-cheese",
     "description": "An American clasic! Two slices of bread toasted around a slice of melted American cheese!",
@@ -120,14 +118,13 @@
       "Once both sides are crispy to your liking, transfer to a plate to serve and enjoy!"
     ],
     "image": "https://images.unsplash.com/photo-1634598604019-7fca68ad3b8e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1035&q=80",
-    "inactive": false,
     "chef": "John",
     "tags": ["grilled cheese", "sandwich", "american"],
-    "createdAt": "2022-01-01T00:00:00.000Z",
-    "updatedAt": "2022-01-01T00:00:00.000Z"
+    "created_at": "2022-01-01T00:00:00.000Z",
+    "updated_at": "2022-01-01T00:00:00.000Z"
   },
   {
-    "id": 4,
+    "id": "4",
     "title": "Orange Zest Blueberry Pie",
     "slug": "orange-zest-blueberry-pie",
     "description": "This delicious blueberry pie will leave you wondering why you never tried it before! Inspired by MasterChef Season 5 Contestant Jaimee Vitolo, the orange zest and liqueur adds a nice contrast to the sweet blueberries!",
@@ -163,14 +160,13 @@
       "Yeild: 1 (9inch) pie"
     ],
     "image": "https://images.unsplash.com/photo-1619051965508-0872c572ee34?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1364&q=80",
-    "inactive": false,
     "chef": "John",
     "tags": ["blueberry", "pie", "blueberries", "orange", "orange zest", "dessert"],
-    "createdAt": "2022-01-01T00:00:00.000Z",
-    "updatedAt": "2022-01-01T00:00:00.000Z"
+    "created_at": "2022-01-01T00:00:00.000Z",
+    "updated_at": "2022-01-01T00:00:00.000Z"
   },
   {
-    "id": 5,
+    "id": "5",
     "title": "The Best Sweet Potato Casserole",
     "slug": "best-sweet-potato-casserole",
     "description": "This sweet potato casserole is sprinkled with a nutty crumb topping to create a pleasantly crunchy contrast to the creamy and soft mashed sweet potatoes down below. The filling gets an extra special pumpkin pie(ish) treatment with brown sugar and vanilla for a deep caramel flavor.",
@@ -196,10 +192,9 @@
       "Special Equipment: 2 Quart Baking Dish"
     ],
     "image": "https://images.unsplash.com/photo-1576087171302-0a4d84681c40?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2252&q=80",
-    "inactive": false,
     "chef": "Becky",
     "tags": ["sides", "sweet potato", "casserole", "holiday"],
-    "createdAt": "2022-01-01T00:00:00.000Z",
-    "updatedAt": "2022-01-01T00:00:00.000Z"
+    "created_at": "2022-01-01T00:00:00.000Z",
+    "updated_at": "2022-01-01T00:00:00.000Z"
   }
 ]

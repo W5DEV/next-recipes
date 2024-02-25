@@ -36,7 +36,7 @@ export default function Home() {
     };
     validateUser();
     getRecipes();
-  }, []);
+  }, [router]);
   return (
     <Dashboard name={name}>
       <ul>
