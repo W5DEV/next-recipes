@@ -19,13 +19,13 @@ export default function Navigation() {
         className='flex items-center justify-between p-6 mx-auto max-w-7xl lg:px-8'
         aria-label='Global'
       >
-        <div className='flex mx-2 lg:mx-12 lg:flex-1'>
+        <div className='flex flex-1'>
           <Link href='/' className='-m-1.5 p-1.5'>
-            <span className='sr-only'>Your Company</span>
+            <span className='sr-only'>My Online Cookbook</span>
             <Logo />
           </Link>
         </div>
-        <div className='flex gap-x-2 lg:gap-x-12'>
+        <div className='flex gap-x-12'>
           {navigation.map((item) => (
             <Link
               key={item.name}
@@ -36,7 +36,7 @@ export default function Navigation() {
             </Link>
           ))}
         </div>
-        <div className='flex lg:flex-1 lg:justify-end'>
+        <div className='flex justify-end flex-1'>
           <Link href={'/login'} className='text-sm font-semibold leading-6 text-gray-900'>
             Log in <span aria-hidden='true'>&rarr;</span>
           </Link>
