@@ -64,6 +64,10 @@ export interface iAllRecipes {
 
 const apiUrl = process.env.API_URL;
 
+export const DeleteCookie = () => {
+  cookies().delete('User-Token');
+};
+
 export const UserLogin = async (email: string, password: string): Promise<any> => {
   try {
     const response = await axios.post(`${apiUrl}/auth/login`, {
