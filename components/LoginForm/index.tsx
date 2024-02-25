@@ -13,6 +13,7 @@ export default function LoginForm() {
     const email = e.currentTarget.email.value as string;
     const password = e.currentTarget.password.value as string;
     const res = await UserLogin(email, password);
+    console.log('login res: ', res);
     if (res === 'success') {
       router.push('/admin');
     } else {
