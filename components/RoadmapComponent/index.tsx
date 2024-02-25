@@ -5,10 +5,9 @@ export default function RoadmapComponent() {
       <div className='flex flex-col items-start justify-start w-full'>
         <div className='text-xl font-bold'>Coming Soon:</div>
         <ul className='list-disc list-inside'>
-          <li>User Login</li>
-          <li>Recipe Upload</li>
-          <li>Recipe Edit</li>
-          <li>Credentials Request</li>
+          <li>
+            Rework Recipe Page Styling (Will include style for recipes with and without image)
+          </li>
           <li>Recipe Search</li>
           <li>User Favorites</li>
         </ul>

@@ -36,16 +36,18 @@ The frontend utilizes Next.js as the framework, with Tailwind CSS for styling.
 
 ## To-Do (Phase 1)
 
-1. Rework data structure on front-end to meet requirements of new backend.
-2. Implement authentication and access to the dashboard.
-3. Create a recipe dashboard that shows all recipes in the database.
-4. Implement the ability to add new recipes and edit existing recipes.
-5. Figure out recipe image handling. (This may be a phase 2 feature)
-6. Implement printer-optimized version of recipe page.
+1. ~~Rework data structure on front-end to meet requirements of new backend.~~
+2. ~~Implement authentication and access to the dashboard.~~
+3. ~~Create a recipe dashboard that shows all recipes in the database.~~
+4. ~~Implement the ability to add new recipes and edit existing recipes.~~
+5. ~~Figure out recipe image handling. (This may be a phase 2 feature)~~
+6. Restyle Recipe page to work better with recipes with and without images.
+7. Implement printer-optimized version of recipe page.
 
 ## To-Do (Phase 2)
 
-1. Create moe user-friendly public recipes.
-2. Implement search/filter function on recipe dashboard
-3. Create a 'favorites' tab under account that shows all recipes that have been favorited by the user.
-4. Create a 'shopping list' tab under account that shows all ingredients from all recipes that have been added to the shopping list by the user.
+1. Image handling - rework recipe display page and make room for small image if available.
+2. Create more user-friendly public recipes.
+3. Implement search/filter function on recipe dashboard
+4. Create a 'favorites' tab under account that shows all recipes that have been favorited by the user.
+5. Create a 'shopping list' tab under account that shows all ingredients from all recipes that have been added to the shopping list by the user.

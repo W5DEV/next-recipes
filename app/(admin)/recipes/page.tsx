@@ -13,7 +13,7 @@ export default function Home() {
   const [name, setName] = useState('');
   const router = useRouter();
   const [recipes, setRecipes] = useState<iRecipe[]>([]);
-  const [createMode, setCreateMode] = useState(false);
+  const [createMode] = useState(false);
 
   useEffect(() => {
     const getRecipes = async () => {
@@ -29,7 +29,6 @@ export default function Home() {
     const validateUser = async () => {
       const res = await UserValidation();
       const status = res.status;
-      console.log('admin status: ', res, status);
       if (status !== 'success') {
         router.push('/login');
       } else {
@@ -40,29 +39,17 @@ export default function Home() {
     };
     validateUser();
     getRecipes();
-  }, []);
-
+  }, [router]);
   return (
     <Dashboard name={name}>
-      {!createMode ? (
+      {!createMode && (
         <div className='flex items-center justify-end w-full h-auto p-4'>
           <button
-            onClick={() => setCreateMode(!createMode)}
+            onClick={() => router.push('/admin')}
             className='px-6 py-2 text-xl font-bold text-white bg-green-600 rounded-2xl outline outline-green-600 outline-2 hover:bg-white hover:text-green-600'
           >
             Create New Recipe
           </button>
-        </div>
-      ) : (
-        <div className='flex items-center justify-start w-full h-auto p-4'>
-          <div className='px-6 py-2 '>
-            <button
-              onClick={() => setCreateMode(!createMode)}
-              className='text-xl font-semibold text-cyan-800 hover:underline'
-            >
-              <span aria-hidden='true'>&larr;</span>Back
-            </button>
-          </div>
         </div>
       )}
       {createMode ? (
