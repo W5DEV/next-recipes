@@ -26,6 +26,7 @@ export default function Home() {
     const validateUser = async () => {
       const res = await UserValidation();
       const status = res.status;
+      console.log('admin status: ', res, status);
       if (status !== 'success') {
         router.push('/login');
       } else {

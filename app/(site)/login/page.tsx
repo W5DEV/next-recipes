@@ -18,6 +18,7 @@ export default function Login() {
     const validateUser = async () => {
       const res = await UserValidation();
       const status = res.status;
+      console.log('login status: ', res, status);
       if (status === 'success') {
         const fullName = res.data.user.name as string;
         const firstName = fullName.split(' ')[0];
@@ -28,7 +29,6 @@ export default function Login() {
           router.push('/admin');
         }, 1500);
       } else {
-        console.log('why no worky');
         setIsLoaded(true);
         setUserLoggedIn(false);
       }
