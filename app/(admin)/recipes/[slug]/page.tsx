@@ -30,6 +30,12 @@ export default function RecipePage() {
 
   return (
     <>
+      <button
+        onClick={() => setEditMode(!editMode)}
+        className='px-6 py-2 text-xl font-bold text-white rounded-2xl bg-cyan-600 outline outline-cyan-600 outline-2 hover:bg-white hover:text-cyan-600'
+      >
+        Login
+      </button>
       {editMode ? (
         <RecipeForm recipe={selectedRecipe} />
       ) : !isLoading && selectedRecipe ? (
