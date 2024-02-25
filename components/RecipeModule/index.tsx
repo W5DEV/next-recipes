@@ -56,22 +56,9 @@ export default function RecipeModule({ recipe }: iRecipeModuleProps) {
       {recipe && (
         <main className='px-4 pb-24 mx-auto pt-14 sm:px-6 sm:pb-32 sm:pt-16 lg:max-w-7xl lg:px-8'>
           {/* Product */}
-          <div className='lg:grid lg:grid-cols-7 lg:grid-rows-1 lg:gap-x-8 lg:gap-y-10 xl:gap-x-16'>
-            {/* Product image */}
-            <div className='lg:col-span-4 lg:row-end-1'>
-              <div className='overflow-hidden bg-gray-100 rounded-lg aspect-h-3 aspect-w-4'>
-                <picture>
-                  <img
-                    src={recipe.image}
-                    alt={recipe.slug}
-                    className='hidden object-cover object-center lg:block'
-                  />
-                </picture>
-              </div>
-            </div>
-
+          <div className='lg:grid lg:grid-cols-9 lg:grid-rows-1 lg:gap-x-8 lg:gap-y-10 xl:gap-x-16'>
             {/* Product details */}
-            <div className='max-w-2xl px-4 mx-auto mt-14 sm:mt-16 lg:col-span-3 lg:row-span-2 lg:row-end-2 lg:mt-0 lg:max-w-none sm:px-0'>
+            <div className='max-w-2xl px-4 mx-auto mt-14 sm:mt-16 lg:col-span-3 lg:row-span-5 lg:row-end-1 lg:mt-0 lg:max-w-none sm:px-0'>
               <div className='flex flex-col-reverse'>
                 <div className='mt-4'>
                   <h1 className='text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl'>
@@ -80,6 +67,20 @@ export default function RecipeModule({ recipe }: iRecipeModuleProps) {
                   <p className='mt-2 text-sm text-gray-500'>Chef: {recipe.chef}</p>
                 </div>
               </div>
+              {/* Product image */}
+              {recipe.image && (
+                <div className='lg:col-span-4 lg:row-end-1'>
+                  <div className='overflow-hidden bg-gray-100 rounded-lg aspect-h-3 aspect-w-4'>
+                    <picture>
+                      <img
+                        src={recipe.image}
+                        alt={recipe.slug}
+                        className='hidden object-cover object-center lg:block'
+                      />
+                    </picture>
+                  </div>
+                </div>
+              )}
 
               <p className='mt-6 text-gray-500'>{recipe.description}</p>
               {recipe.image && (
@@ -94,6 +95,7 @@ export default function RecipeModule({ recipe }: iRecipeModuleProps) {
 
               <div className='pt-4 border-t border-gray-200'>
                 <div className='mt-4 prose-sm prose text-gray-500'>
+                  <h3 className='pb-4 text-2xl font-bold text-gray-900'>Ingredients:</h3>
                   <ul role='list'>
                     {ingredients &&
                       Object.values(ingredients).map((ingredient) => (

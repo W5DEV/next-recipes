@@ -1,4 +1,9 @@
-import type { iRecipe } from '@/api';
+/* eslint-disable @typescript-eslint/no-floating-promises */
+/* eslint-disable @typescript-eslint/no-unsafe-assignment */
+import type { iNewRecipe, iRecipe } from '@/api';
+import { CreateRecipe, UpdateRecipe } from '@/api';
+import type { AxiosResponse } from 'axios';
+import { useRouter } from 'next/navigation';
 import type { FormEvent } from 'react';
 import { useState } from 'react';
 
@@ -19,30 +24,62 @@ const emptyRecipe: iRecipe = {
 
 export default function RecipeForm({ recipe }: { recipe?: iRecipe }) {
   const [originalRecipe] = useState<iRecipe>(recipe || emptyRecipe);
+  const router = useRouter();
 
   const handleSaveRecipe = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     const formData = new FormData(event.target as HTMLFormElement);
     const recipeFormData = Object.fromEntries(formData.entries());
-    const newRecipe: iRecipe = {
-      id: originalRecipe.id,
-      title: recipeFormData.title as string,
-      slug: recipeFormData.slug as string,
-      description: recipeFormData.description as string,
-      category: recipeFormData.category as string,
-      chef: recipeFormData.chef as string,
-      ingredients: (recipeFormData.ingredients as string)
-        .split('\n')
-        .map((ingredient) => ingredient.trim()),
-      instructions: (recipeFormData.instructions as string)
-        .split('\n')
-        .map((instruction) => instruction.trim()),
-      tags: (recipeFormData.tags as string).split(',').map((tag) => tag.trim()),
-      image: recipeFormData.image as string,
-      created_at: originalRecipe.created_at,
-      updated_at: new Date().toISOString(),
-    };
-    console.log(newRecipe);
+    if (recipe) {
+      const updatedRecipe: iRecipe = {
+        id: originalRecipe.id,
+        title: recipeFormData.title as string,
+        slug: recipeFormData.slug as string,
+        description: recipeFormData.description as string,
+        category: recipeFormData.category as string,
+        chef: recipeFormData.chef as string,
+        ingredients: (recipeFormData.ingredients as string)
+          .split('\n')
+          .map((ingredient) => ingredient.trim()),
+        instructions: (recipeFormData.instructions as string)
+          .split('\n')
+          .map((instruction) => instruction.trim()),
+        tags: (recipeFormData.tags as string).split(',').map((tag) => tag.trim()),
+        image: recipeFormData.image as string,
+        created_at: originalRecipe.created_at,
+        updated_at: new Date().toISOString(),
+      };
+      const updateRecipe = async () => {
+        await UpdateRecipe(updatedRecipe.id, updatedRecipe).then((response: AxiosResponse) => {
+          console.log('updatedRecipe: ', response);
+          router.push(`/admin`);
+        });
+      };
+      updateRecipe();
+    } else {
+      const createRecipe = async () => {
+        const newRecipe: iNewRecipe = {
+          title: recipeFormData.title as string,
+          slug: recipeFormData.slug as string,
+          description: recipeFormData.description as string,
+          category: recipeFormData.category as string,
+          chef: recipeFormData.chef as string,
+          ingredients: (recipeFormData.ingredients as string)
+            .split('\n')
+            .map((ingredient) => ingredient.trim()),
+          instructions: (recipeFormData.instructions as string)
+            .split('\n')
+            .map((instruction) => instruction.trim()),
+          tags: (recipeFormData.tags as string).split(',').map((tag) => tag.trim()),
+          image: recipeFormData.image as string,
+        };
+        await CreateRecipe(newRecipe).then((response: AxiosResponse) => {
+          console.log('createdRecipe: ', response);
+          router.push('/recipes');
+        });
+      };
+      createRecipe();
+    }
   };
   return (
     <div className='flex flex-col items-start justify-center w-5/6 h-auto px-4 py-10 bg-white'>
