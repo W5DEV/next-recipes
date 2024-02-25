@@ -1,6 +1,8 @@
 'use client';
 import Link from 'next/link';
 import Logo from '../Logo';
+import AlertBanner from '../AlertBanner';
+import { usePathname } from 'next/navigation';
 
 const navigation = [
   { name: 'Home', href: '/' },
@@ -9,6 +11,8 @@ const navigation = [
 ];
 
 export default function Navigation() {
+  const pathname = usePathname();
+  const isHome = !pathname.toString().includes('admin') && !pathname.toString().includes('recipes');
   return (
     <div className='sticky top-0 z-50 w-screen bg-gradient-to-b from-white to-transparent'>
       <nav
@@ -38,6 +42,7 @@ export default function Navigation() {
           </Link>
         </div>
       </nav>
+      {isHome && <AlertBanner />}
     </div>
   );
 }
