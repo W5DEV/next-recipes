@@ -162,12 +162,6 @@ export default function RecipeForm({ recipe }: { recipe?: iRecipe }) {
           >
             Save
           </button>
-          <button
-            className='px-8 py-4 font-semibold text-white bg-red-600 rounded-lg cursor-pointer outline outline-2 outline-red-600 hover:text-red-600 hover:bg-white'
-            type='submit'
-          >
-            Cancel
-          </button>
         </div>
       </form>
     </div>

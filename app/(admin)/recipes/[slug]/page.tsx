@@ -30,14 +30,28 @@ export default function RecipePage() {
 
   return (
     <>
-      <button
-        onClick={() => setEditMode(!editMode)}
-        className='px-6 py-2 text-xl font-bold text-white rounded-2xl bg-cyan-600 outline outline-cyan-600 outline-2 hover:bg-white hover:text-cyan-600'
-      >
-        Login
-      </button>
+      {!editMode && (
+        <div className='flex items-center justify-center w-full h-auto p-4'>
+          <button
+            onClick={() => setEditMode(!editMode)}
+            className='px-6 py-2 text-xl font-bold text-white rounded-2xl bg-cyan-600 outline outline-cyan-600 outline-2 hover:bg-white hover:text-cyan-600'
+          >
+            Edit Recipe
+          </button>
+        </div>
+      )}
       {editMode ? (
-        <RecipeForm recipe={selectedRecipe} />
+        <>
+          <RecipeForm recipe={selectedRecipe} />
+          <div className='flex items-center justify-center w-full h-auto p-4'>
+            <button
+              onClick={() => setEditMode(!editMode)}
+              className='px-6 py-2 text-xl font-bold text-white bg-red-600 rounded-2xl outline outline-red-600 outline-2 hover:bg-white hover:text-red-600'
+            >
+              Cancel (Discard Changes)
+            </button>
+          </div>
+        </>
       ) : !isLoading && selectedRecipe ? (
         <RecipeModule recipe={selectedRecipe} />
       ) : isLoading ? (
