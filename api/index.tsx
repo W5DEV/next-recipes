@@ -105,6 +105,7 @@ export const UserValidation = async (): Promise<any> => {
     });
     return response.data;
   } catch (e) {
+    DeleteCookie();
     const error = e as AxiosError;
     return error;
   }
