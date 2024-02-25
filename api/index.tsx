@@ -87,8 +87,7 @@ export const UserValidation = async (): Promise<any> => {
     const response = await axios.get(`${apiUrl}/users/me`, {
       headers: { Authorization: `Bearer ${token.value}` },
     });
-    const responseData = response.data as iUserValidationResponse;
-    return responseData;
+    return response.data;
   } catch (e) {
     const error = e as AxiosError;
     return error;
