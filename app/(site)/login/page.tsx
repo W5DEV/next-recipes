@@ -4,7 +4,7 @@
 'use client';
 import { useEffect, useState } from 'react';
 import LoginForm from '@/components/LoginForm';
-import { DeleteCookie, UserValidation } from '@/api';
+import { UserValidation } from '@/api';
 import { useRouter } from 'next/navigation';
 import LoggedInSplash from '@/components/LoggedInSplash';
 
@@ -29,7 +29,6 @@ export default function Login() {
           router.push('/admin');
         }, 1500);
       } else {
-        DeleteCookie();
         setIsLoaded(true);
         setUserLoggedIn(false);
       }
