@@ -77,7 +77,6 @@ export const UserLogin = async (email: string, password: string): Promise<any> =
 
 export const UserValidation = async (): Promise<any> => {
   if (!token) {
-    console.log('No token found');
     const noTokenResponse = {
       status: 'error',
       message: 'No token found',

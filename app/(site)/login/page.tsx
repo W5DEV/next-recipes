@@ -28,6 +28,7 @@ export default function Login() {
           router.push('/admin');
         }, 1500);
       } else {
+        console.log('why no worky');
         setIsLoaded(true);
         setUserLoggedIn(false);
       }
