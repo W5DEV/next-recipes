@@ -42,6 +42,19 @@ export interface iRecipe {
   updated_at: string;
 }
 
+export interface iNewRecipe {
+  id?: string;
+  title: string;
+  slug: string;
+  description: string;
+  category: string;
+  ingredients: string[];
+  instructions: string[];
+  image: string;
+  chef: string;
+  tags: string[];
+}
+
 export interface iAllRecipes {
   data?: iRecipe[];
   results?: number;
@@ -50,6 +63,10 @@ export interface iAllRecipes {
 }
 
 const apiUrl = process.env.API_URL;
+
+export const DeleteCookie = () => {
+  cookies().delete('User-Token');
+};
 
 export const UserLogin = async (email: string, password: string): Promise<any> => {
   try {
@@ -146,7 +163,7 @@ export const GetRecipeById = async (id: string): Promise<any> => {
   }
 };
 
-export const CreateRecipe = async (recipe: any): Promise<any> => {
+export const CreateRecipe = async (recipe: iNewRecipe): Promise<any> => {
   const token = cookies().get('User-Token');
   if (!token) {
     const noTokenResponse = {
@@ -159,14 +176,15 @@ export const CreateRecipe = async (recipe: any): Promise<any> => {
     const response = await axios.post(`${apiUrl}/recipes`, recipe, {
       headers: { Authorization: `Bearer ${token.value}` },
     });
-    return response.data;
+    const responseData = response.data as iAllRecipes;
+    return responseData;
   } catch (e) {
     const error = e as AxiosError;
     return error;
   }
 };
 
-export const UpdateRecipe = async (id: string, recipe: any): Promise<any> => {
+export const UpdateRecipe = async (id: string, recipe: iRecipe): Promise<any> => {
   const token = cookies().get('User-Token');
   if (!token) {
     const noTokenResponse = {
@@ -176,10 +194,11 @@ export const UpdateRecipe = async (id: string, recipe: any): Promise<any> => {
     return noTokenResponse;
   }
   try {
-    const response = await axios.post(`${apiUrl}/recipes/${id}`, recipe, {
+    const response = await axios.put(`${apiUrl}/recipes/${id}`, recipe, {
       headers: { Authorization: `Bearer ${token.value}` },
     });
-    return response.data;
+    const responseData = response.data as iAllRecipes;
+    return responseData;
   } catch (e) {
     const error = e as AxiosError;
     return error;
@@ -199,7 +218,7 @@ export const DeleteRecipe = async (id: string): Promise<any> => {
     const response = await axios.delete(`${apiUrl}/recipes/${id}`, {
       headers: { Authorization: `Bearer ${token.value}` },
     });
-    return response.data;
+    return response;
   } catch (e) {
     const error = e as AxiosError;
     return error;
