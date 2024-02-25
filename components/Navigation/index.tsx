@@ -14,7 +14,7 @@ export default function Navigation() {
   const pathname = usePathname();
   const isHome = !pathname.toString().includes('admin') && !pathname.toString().includes('recipes');
   return (
-    <div className='sticky top-0 z-50 w-screen bg-gradient-to-b from-white to-transparent'>
+    <div className='sticky top-0 z-50 w-screen bg-white'>
       <nav
         className='flex items-center justify-between p-6 mx-auto max-w-7xl lg:px-8'
         aria-label='Global'
