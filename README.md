@@ -41,7 +41,8 @@ The frontend utilizes Next.js as the framework, with Tailwind CSS for styling.
 3. ~~Create a recipe dashboard that shows all recipes in the database.~~
 4. ~~Implement the ability to add new recipes and edit existing recipes.~~
 5. ~~Figure out recipe image handling. (This may be a phase 2 feature)~~
-6. Implement printer-optimized version of recipe page.
+6. Restyle Recipe page to work better with recipes with and without images.
+7. Implement printer-optimized version of recipe page.
 
 ## To-Do (Phase 2)
 
