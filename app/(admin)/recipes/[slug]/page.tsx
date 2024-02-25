@@ -31,7 +31,7 @@ export default function RecipePage() {
   return (
     <>
       {!editMode && (
-        <div className='flex items-center justify-center w-full h-auto p-4'>
+        <div className='flex items-center justify-end w-full h-auto p-4'>
           <button
             onClick={() => setEditMode(!editMode)}
             className='px-6 py-2 text-xl font-bold text-white rounded-2xl bg-cyan-600 outline outline-cyan-600 outline-2 hover:bg-white hover:text-cyan-600'
