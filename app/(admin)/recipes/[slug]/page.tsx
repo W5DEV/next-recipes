@@ -6,8 +6,10 @@ import { GetRecipeById } from '@/api';
 import type { iAllRecipes, iRecipe } from '@/api';
 import { useSearchParams } from 'next/navigation';
 import { useEffect, useState } from 'react';
+import RecipeForm from '@/components/RecipeForm';
 
 export default function RecipePage() {
+  const [editMode, setEditMode] = useState(false);
   const searchParams = useSearchParams();
   const recipeId = searchParams.get('id');
   const [selectedRecipe, setSelectedRecipe] = useState<iRecipe | undefined>();
@@ -28,7 +30,9 @@ export default function RecipePage() {
 
   return (
     <>
-      {!isLoading && selectedRecipe ? (
+      {editMode ? (
+        <RecipeForm recipe={selectedRecipe} />
+      ) : !isLoading && selectedRecipe ? (
         <RecipeModule recipe={selectedRecipe} />
       ) : isLoading ? (
         <div className='flex flex-row items-center justify-center w-full h-full text-xl text-center bold'>
