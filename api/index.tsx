@@ -51,8 +51,6 @@ export interface iAllRecipes {
 
 const apiUrl = process.env.API_URL;
 
-const token = cookies().get('User-Token');
-
 export const UserLogin = async (email: string, password: string): Promise<any> => {
   try {
     const response = await axios.post(`${apiUrl}/auth/login`, {
@@ -76,7 +74,8 @@ export const UserLogin = async (email: string, password: string): Promise<any> =
 };
 
 export const UserValidation = async (): Promise<any> => {
-  if (!cookies().has('User-Token')) {
+  const token = cookies().get('User-Token');
+  if (!token) {
     const noTokenResponse = {
       status: 'error',
       message: 'No token found',
@@ -85,7 +84,7 @@ export const UserValidation = async (): Promise<any> => {
   }
   try {
     const response = await axios.get(`${apiUrl}/users/me`, {
-      headers: { Authorization: `Bearer ${token?.value}` },
+      headers: { Authorization: `Bearer ${token.value}` },
     });
     return response.data;
   } catch (e) {
@@ -106,7 +105,8 @@ export const UserValidation = async (): Promise<any> => {
 }; */
 
 export const GetAllRecipes = async (): Promise<any> => {
-  if (!cookies().has('User-Token')) {
+  const token = cookies().get('User-Token');
+  if (!token) {
     const noTokenResponse = {
       status: 'error',
       message: 'No token found',
@@ -115,7 +115,7 @@ export const GetAllRecipes = async (): Promise<any> => {
   }
   try {
     const response = await axios.get(`${apiUrl}/recipes`, {
-      headers: { Authorization: `Bearer ${token?.value}` },
+      headers: { Authorization: `Bearer ${token.value}` },
     });
     const responseData = response.data as iAllRecipes;
     return responseData;
@@ -126,7 +126,8 @@ export const GetAllRecipes = async (): Promise<any> => {
 };
 
 export const GetRecipeById = async (id: string): Promise<any> => {
-  if (!cookies().has('User-Token')) {
+  const token = cookies().get('User-Token');
+  if (!token) {
     const noTokenResponse = {
       status: 'error',
       message: 'No token found',
@@ -135,7 +136,7 @@ export const GetRecipeById = async (id: string): Promise<any> => {
   }
   try {
     const response = await axios.get(`${apiUrl}/recipes/${id}`, {
-      headers: { Authorization: `Bearer ${token?.value}` },
+      headers: { Authorization: `Bearer ${token.value}` },
     });
     const responseData = response.data as iAllRecipes;
     return responseData;
@@ -146,6 +147,7 @@ export const GetRecipeById = async (id: string): Promise<any> => {
 };
 
 export const CreateRecipe = async (recipe: any): Promise<any> => {
+  const token = cookies().get('User-Token');
   if (!token) {
     const noTokenResponse = {
       status: 'error',
@@ -165,7 +167,8 @@ export const CreateRecipe = async (recipe: any): Promise<any> => {
 };
 
 export const UpdateRecipe = async (id: string, recipe: any): Promise<any> => {
-  if (!cookies().has('User-Token')) {
+  const token = cookies().get('User-Token');
+  if (!token) {
     const noTokenResponse = {
       status: 'error',
       message: 'No token found',
@@ -174,7 +177,7 @@ export const UpdateRecipe = async (id: string, recipe: any): Promise<any> => {
   }
   try {
     const response = await axios.post(`${apiUrl}/recipes/${id}`, recipe, {
-      headers: { Authorization: `Bearer ${token?.value}` },
+      headers: { Authorization: `Bearer ${token.value}` },
     });
     return response.data;
   } catch (e) {
@@ -184,6 +187,7 @@ export const UpdateRecipe = async (id: string, recipe: any): Promise<any> => {
 };
 
 export const DeleteRecipe = async (id: string): Promise<any> => {
+  const token = cookies().get('User-Token');
   if (!token) {
     const noTokenResponse = {
       status: 'error',
