@@ -75,8 +75,22 @@ export default function Home() {
               key={recipe.id}
               className='p-4 border-b rounded-md cursor-pointer group hover:bg-gray-200'
             >
-              <h2 className='p-2 text-lg font-bold group-hover:underline'>{recipe.title}</h2>
-              <p className='text-sm text-gray-700'>{recipe.description}</p>
+              <span className='flex flex-row items-center justify-between'>
+                <span className='flex flex-row items-center justify-start'>
+                  <h2 className='p-2 text-lg font-bold group-hover:underline'>{recipe.title}</h2>
+                  <p className='text-sm text-gray-400'>{recipe.chef}</p>
+                </span>
+                <span>
+                  {recipe.tags.map((tag) => {
+                    return (
+                      <span key={tag} className='px-2 py-1 mr-2 text-sm text-gray-300 rounded-md'>
+                        {tag.charAt(0).toUpperCase() + tag.slice(1).toLowerCase()}
+                      </span>
+                    );
+                  })}
+                </span>
+              </span>
+              <p className='text-xs text-gray-700'>{recipe.description}</p>
             </li>
           ))}
         </ul>
