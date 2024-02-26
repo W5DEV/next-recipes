@@ -21,7 +21,10 @@ export default function Home() {
       const status = res.status;
       if (status === 'success') {
         const allRecipes = res.data as iRecipe[];
-        setRecipes(allRecipes);
+        const sortedRecipes = allRecipes.sort((a, b) => {
+          return a.title.localeCompare(b.title);
+        });
+        setRecipes(sortedRecipes);
       } else {
         setRecipes([]);
       }
