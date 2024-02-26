@@ -75,15 +75,14 @@ export default function Home() {
               key={recipe.id}
               className='p-4 border-b rounded-md cursor-pointer group hover:bg-gray-200'
             >
-              <span className='flex flex-row items-center justify-between'>
+              <span className='flex flex-col items-start justify-center pb-2'>
                 <span className='flex flex-row items-center justify-start'>
-                  <h2 className='p-2 text-lg font-bold group-hover:underline'>{recipe.title}</h2>
-                  <p className='text-sm text-gray-400'>{recipe.chef}</p>
+                  <h2 className='text-lg font-bold group-hover:underline'>{recipe.title}</h2>
                 </span>
-                <span>
+                <span className='w-full truncate line-clamp-1'>
                   {recipe.tags.map((tag) => {
                     return (
-                      <span key={tag} className='px-2 py-1 mr-2 text-sm text-gray-300 rounded-md'>
+                      <span key={tag} className='mr-2 text-sm text-gray-300 rounded-md'>
                         {tag.charAt(0).toUpperCase() + tag.slice(1).toLowerCase()}
                       </span>
                     );

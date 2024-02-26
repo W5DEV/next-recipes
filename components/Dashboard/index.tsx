@@ -1,7 +1,6 @@
 'use client';
 
 import { Disclosure } from '@headlessui/react';
-import { MagnifyingGlassIcon } from '@heroicons/react/20/solid';
 import Logo from '../Logo';
 
 export default function Dashboard({ children, name }: { children: React.ReactNode; name: string }) {
@@ -19,25 +18,6 @@ export default function Dashboard({ children, name }: { children: React.ReactNod
                   <div className='flex items-center px-2 lg:px-0'>
                     <div className='flex-shrink-0'>
                       <Logo height={'48'} color={'white '} />
-                    </div>
-                  </div>
-                  <div className='flex justify-center flex-1 px-2 lg:ml-6 lg:justify-end'>
-                    <div className='w-full max-w-lg lg:max-w-xs'>
-                      <label htmlFor='search' className='sr-only'>
-                        Search
-                      </label>
-                      <div className='relative text-gray-400 focus-within:text-gray-600'>
-                        <div className='absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none'>
-                          <MagnifyingGlassIcon className='w-5 h-5' aria-hidden='true' />
-                        </div>
-                        <input
-                          id='search'
-                          className='block w-full rounded-md border-0 bg-white py-1.5 pl-10 pr-3 text-gray-900 focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-cyan-600 sm:text-sm sm:leading-6'
-                          placeholder='Search'
-                          type='search'
-                          name='search'
-                        />
-                      </div>
                     </div>
                   </div>
                 </div>
