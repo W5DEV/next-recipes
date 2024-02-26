@@ -11,7 +11,7 @@ export default function RecipeModule({ recipe }: iRecipeModuleProps) {
   const instructions = recipe && recipe.instructions;
 
   return (
-    <div className='relative isolate'>
+    <div className='relative flex flex-col items-start justify-start w-full isolate'>
       <svg
         className='absolute inset-x-0 top-0 -z-10 h-[64rem] w-full stroke-cyan-200 [mask-image:radial-gradient(32rem_32rem_at_center,white,transparent)]'
         aria-hidden='true'
@@ -54,11 +54,9 @@ export default function RecipeModule({ recipe }: iRecipeModuleProps) {
         />
       </div>
       {recipe && (
-        <main className='px-4 pb-24 mx-auto pt-14 sm:px-6 sm:pb-32 sm:pt-16 lg:max-w-7xl lg:px-8'>
-          {/* Product */}
-          <div className='lg:grid lg:grid-cols-9 lg:grid-rows-1 lg:gap-x-8 lg:gap-y-10 xl:gap-x-16'>
-            {/* Product details */}
-            <div className='max-w-2xl px-4 mx-auto mt-14 sm:mt-16 lg:col-span-3 lg:row-span-5 lg:row-end-1 lg:mt-0 lg:max-w-none sm:px-0'>
+        <main className='w-full px-4 py-4 mx-auto sm:px-6 lg:max-w-7xl lg:px-8'>
+          <div className='flex flex-col items-start justify-start'>
+            <div className='w-full px-4 mx-auto mt-4'>
               <div className='flex flex-col-reverse'>
                 <div className='mt-4'>
                   <h1 className='text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl'>
@@ -84,8 +82,7 @@ export default function RecipeModule({ recipe }: iRecipeModuleProps) {
               </div>
             </div>
           </div>
-
-          <div className='w-full max-w-2xl px-4 mx-auto mt-16 lg:col-span-4 lg:mt-0 lg:max-w-none sm:px-0 lg:px-12'>
+          <div className='flex flex-col items-start justify-start w-full max-w-4xl px-4 mt-16'>
             <h3 className='pb-4 text-2xl font-bold text-gray-900'>Instructions:</h3>
             <ul className='list-decimal'>
               {instructions &&
