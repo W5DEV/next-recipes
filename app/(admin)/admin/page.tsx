@@ -161,7 +161,7 @@ export default function Home() {
                 <ul>
                   {filteredRecipes.map((recipe) => (
                     <li
-                      onClick={() => router.push(`/recipes/${recipe.slug}?id=${recipe.id}`)}
+                      onClick={() => router.push(`/admin/${recipe.slug}?id=${recipe.id}`)}
                       key={recipe.id}
                       className='p-4 border-b rounded-md cursor-pointer group hover:bg-gray-200'
                     >
