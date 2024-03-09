@@ -66,8 +66,9 @@ export default function Home() {
               className='p-4 border-b rounded-md cursor-pointer group hover:bg-gray-200'
             >
               <span className='flex flex-col items-start justify-center pb-2'>
-                <span className='flex flex-row items-center justify-start'>
+                <span className='flex flex-row items-center justify-between w-full'>
                   <h2 className='text-lg font-bold group-hover:underline'>{recipe.title}</h2>
+                  <h3 className='text-base font-medium text-cyan-500'>{recipe.category}</h3>
                 </span>
                 <span className='w-full truncate line-clamp-1'>
                   {recipe.tags.map((tag) => {

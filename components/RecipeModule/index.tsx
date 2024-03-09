@@ -12,7 +12,7 @@ export default function RecipeModule({ recipe }: iRecipeModuleProps) {
 
   return (
     <div className='flex flex-col items-start justify-center w-full px-8 py-24 bg-white lg:px-8'>
-      <div className='mx-auto text-base leading-7 text-gray-700'>
+      <div className='text-base leading-7 text-gray-700'>
         <p className='text-base font-semibold leading-7 text-cyan-600'>{recipe.category}</p>
         <h1 className='mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl'>
           {recipe.title}
@@ -48,7 +48,7 @@ export default function RecipeModule({ recipe }: iRecipeModuleProps) {
           </ul>
         </div>
         <div className='flex flex-row items-center justify-start gap-2 py-4 opacity-40'>
-          <p className='text-base italic font-normal leading-7 text-gray-600'>Tags:</p>
+          <p className='text-base italic font-normal leading-7 text-gray-600'>Keywords:</p>
           {recipe.tags.map((tag) => {
             return <p className='text-base italic font-normal leading-7 text-gray-600'>{tag}</p>;
           })}

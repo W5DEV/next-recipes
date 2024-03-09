@@ -5,7 +5,7 @@ import { CreateRecipe, UpdateRecipe } from '@/api';
 import type { AxiosResponse } from 'axios';
 import { useRouter } from 'next/navigation';
 import type { FormEvent } from 'react';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 const emptyRecipe: iRecipe = {
   id: '',
@@ -24,7 +24,13 @@ const emptyRecipe: iRecipe = {
 
 export default function RecipeForm({ recipe }: { recipe?: iRecipe }) {
   const [originalRecipe] = useState<iRecipe>(recipe || emptyRecipe);
+  const [title, setTitle] = useState<string>(recipe?.title || '');
+  const [slug, setSlug] = useState<string>(recipe?.slug || '');
   const router = useRouter();
+
+  useEffect(() => {
+    setSlug(title.toLowerCase().replace(/ /g, '-'));
+  }, [recipe, title]);
 
   const handleSaveRecipe = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
@@ -34,7 +40,7 @@ export default function RecipeForm({ recipe }: { recipe?: iRecipe }) {
       const updatedRecipe: iRecipe = {
         id: originalRecipe.id,
         title: recipeFormData.title as string,
-        slug: recipeFormData.slug as string,
+        slug: slug,
         description: recipeFormData.description as string,
         category: recipeFormData.category as string,
         chef: recipeFormData.chef as string,
@@ -60,7 +66,7 @@ export default function RecipeForm({ recipe }: { recipe?: iRecipe }) {
       const createRecipe = async () => {
         const newRecipe: iNewRecipe = {
           title: recipeFormData.title as string,
-          slug: recipeFormData.slug as string,
+          slug: slug,
           description: recipeFormData.description as string,
           category: recipeFormData.category as string,
           chef: recipeFormData.chef as string,
@@ -88,32 +94,44 @@ export default function RecipeForm({ recipe }: { recipe?: iRecipe }) {
         onSubmit={(event) => handleSaveRecipe(event)}
       >
         <div className='flex flex-col items-start justify-center w-full gap-2'>
-          <label className='font-bold font-2xl' htmlFor='title'>
+          <label className='text-xl font-bold' htmlFor='title'>
             Title
+            <p className='text-sm italic font-normal opacity-40'>
+              This should be a unique, catchy title that signifies what this recipe is.
+            </p>
           </label>
           <input
             className='w-full h-12 rounded-md'
             type='text'
             id='title'
             name='title'
+            onChange={(event) => setTitle(event.target.value)}
             defaultValue={originalRecipe.title}
           />
         </div>
         <div className='flex flex-col items-start justify-center w-full gap-2'>
-          <label className='font-bold font-2xl' htmlFor='slug'>
-            URL
+          <label className='text-xl font-bold' htmlFor='slug'>
+            Slug
+            <p className='text-sm italic font-normal opacity-40'>
+              This field autopopulates based on the title.
+            </p>
           </label>
           <input
             className='w-full h-12 rounded-md'
+            disabled
             type='text'
             id='slug'
             name='slug'
-            defaultValue={originalRecipe.slug}
+            value={slug}
           />
         </div>
         <div className='flex flex-col items-start justify-center w-full gap-2'>
-          <label className='font-bold font-2xl' htmlFor='description'>
+          <label className='text-xl font-bold' htmlFor='description'>
             Description
+            <p className='text-sm italic font-normal opacity-40'>
+              Use this area to explain what this recipe is all about and why it is special. Why do
+              you like this recipe so much? Why should someone else try it?
+            </p>
           </label>
           <textarea
             className='w-full h-48 rounded-md'
@@ -123,8 +141,12 @@ export default function RecipeForm({ recipe }: { recipe?: iRecipe }) {
           />
         </div>
         <div className='flex flex-col items-start justify-center w-full gap-2'>
-          <label className='font-bold font-2xl' htmlFor='category'>
+          <label className='text-xl font-bold' htmlFor='category'>
             Category
+            <p className='text-sm italic font-normal opacity-40'>
+              What category does this recipe fall under? (e.g. breakfast, lunch, dinner, dessert,
+              sides, soups, salads, etc.)
+            </p>
           </label>
           <input
             className='w-full h-12 rounded-md'
@@ -135,8 +157,11 @@ export default function RecipeForm({ recipe }: { recipe?: iRecipe }) {
           />
         </div>
         <div className='flex flex-col items-start justify-center w-full gap-2'>
-          <label className='font-bold font-2xl' htmlFor='chef'>
+          <label className='text-xl font-bold' htmlFor='chef'>
             Chef
+            <p className='text-sm italic font-normal opacity-40'>
+              Who gets the credit for this recipe? (Hint: this should probably be you!)
+            </p>
           </label>
           <input
             className='w-full h-12 rounded-md'
@@ -147,8 +172,12 @@ export default function RecipeForm({ recipe }: { recipe?: iRecipe }) {
           />
         </div>
         <div className='flex flex-col items-start justify-center w-full gap-2'>
-          <label className='font-bold font-2xl' htmlFor='ingredients'>
-            Ingredients (Put each ingredient on a new line by hitting enter.)
+          <label className='text-xl font-bold' htmlFor='ingredients'>
+            Ingredients
+            <p className='text-sm italic font-normal opacity-40'>
+              Put each ingredient on a new line by hitting enter. Do not try to space out the
+              ingredients and make sure there are no extra trailing spaces.
+            </p>
           </label>
           <textarea
             className='w-full h-48 rounded-md'
@@ -158,9 +187,13 @@ export default function RecipeForm({ recipe }: { recipe?: iRecipe }) {
           />
         </div>
         <div className='flex flex-col items-start justify-center w-full gap-2'>
-          <label className='font-bold font-2xl' htmlFor='instructions'>
+          <label className='text-xl font-bold' htmlFor='instructions'>
             Instructions (Put each step on a new line by hitting enter - no need to enter numbers!.)
           </label>
+          <p className='text-sm italic font-normal opacity-40'>
+            Put each instruction on a new line by hitting enter. Do not try to space out the
+            instructions and make sure there are no extra trailing spaces. No need to enter numbers!
+          </p>
           <textarea
             className='w-full h-48 rounded-md'
             id='instructions'
@@ -169,8 +202,13 @@ export default function RecipeForm({ recipe }: { recipe?: iRecipe }) {
           />
         </div>
         <div className='flex flex-col items-start justify-center w-full gap-2'>
-          <label className='font-bold font-2xl' htmlFor='tags'>
-            Tags (Separate tags with a comma.)
+          <label className='text-xl font-bold' htmlFor='tags'>
+            Keywords
+            <p className='text-sm italic font-normal opacity-40'>
+              Keywords should be memorable words to quickly describe the dish for quick referencing.
+              Keywords should be separated by commas. (e.g. ground beef, steak, chicken, holiday
+              meals, etc.)
+            </p>
           </label>
           <input
             className='w-full h-12 rounded-md'
@@ -181,8 +219,11 @@ export default function RecipeForm({ recipe }: { recipe?: iRecipe }) {
           />
         </div>
         <div className='flex flex-col items-start justify-center w-full gap-2'>
-          <label className='font-bold font-2xl' htmlFor='image'>
+          <label className='text-xl font-bold' htmlFor='image'>
             Image
+            <p className='text-sm italic font-normal opacity-40'>
+              This field is purely optional and is currently not even used.
+            </p>
           </label>
           <input
             className='w-full h-12 rounded-md'
