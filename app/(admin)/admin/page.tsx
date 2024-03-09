@@ -97,9 +97,9 @@ export default function Home() {
               <div className='px-2 mx-auto max-w-7xl sm:px-4 lg:px-8'>
                 <div className='relative flex items-center justify-between h-16 lg:border-b lg:border-cyan-400 lg:border-opacity-25'>
                   <div className='flex items-center px-2 lg:px-0'>
-                    <div className='flex-shrink-0'>
+                    <a href='/' className='flex items-center flex-shrink-0 w-14 h-14 jusify-center'>
                       <Logo height={'48'} color={'white '} />
-                    </div>
+                    </a>
                   </div>
                   <div className='flex justify-center flex-1 px-2 lg:ml-6 lg:justify-end'>
                     <div className='w-full max-w-lg lg:max-w-xs'>

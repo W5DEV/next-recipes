@@ -123,18 +123,8 @@ export const UserValidation = async (): Promise<any> => {
 }; */
 
 export const GetAllRecipes = async (): Promise<any> => {
-  const token = cookies().get('User-Token');
-  if (!token) {
-    const noTokenResponse = {
-      status: 'error',
-      message: 'No token found',
-    };
-    return noTokenResponse;
-  }
   try {
-    const response = await axios.get(`${apiUrl}/recipes`, {
-      headers: { Authorization: `Bearer ${token.value}` },
-    });
+    const response = await axios.get(`${apiUrl}/recipes`);
     const responseData = response.data as iAllRecipes;
     return responseData;
   } catch (e) {
@@ -144,18 +134,8 @@ export const GetAllRecipes = async (): Promise<any> => {
 };
 
 export const GetRecipeById = async (id: string): Promise<any> => {
-  const token = cookies().get('User-Token');
-  if (!token) {
-    const noTokenResponse = {
-      status: 'error',
-      message: 'No token found',
-    };
-    return noTokenResponse;
-  }
   try {
-    const response = await axios.get(`${apiUrl}/recipes/${id}`, {
-      headers: { Authorization: `Bearer ${token.value}` },
-    });
+    const response = await axios.get(`${apiUrl}/recipes/${id}`);
     const responseData = response.data as iAllRecipes;
     return responseData;
   } catch (e) {
