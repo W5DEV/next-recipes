@@ -188,7 +188,7 @@ export default function RecipeForm({ recipe }: { recipe?: iRecipe }) {
         </div>
         <div className='flex flex-col items-start justify-center w-full gap-2'>
           <label className='text-xl font-bold' htmlFor='instructions'>
-            Instructions (Put each step on a new line by hitting enter - no need to enter numbers!.)
+            Instructions
           </label>
           <p className='text-sm italic font-normal opacity-40'>
             Put each instruction on a new line by hitting enter. Do not try to space out the
