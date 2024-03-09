@@ -6,7 +6,7 @@ import { usePathname } from 'next/navigation';
 
 const navigation = [
   { name: 'Home', href: '/' },
-  { name: 'Demo', href: '/demo' },
+  { name: 'Recipes', href: '/recipes' },
   { name: 'Roadmap', href: '/roadmap' },
 ];
 
@@ -16,13 +16,13 @@ export default function Navigation() {
   return (
     <div className='sticky top-0 z-50 w-screen bg-white'>
       <nav
-        className='flex items-center justify-between p-6 mx-auto max-w-7xl lg:px-8'
+        className='flex items-center justify-between px-6 py-2 mx-auto max-w-7xl lg:px-8'
         aria-label='Global'
       >
         <div className='flex flex-1'>
           <Link href='/' className='-m-1.5 p-1.5'>
             <span className='sr-only'>My Online Cookbook</span>
-            <Logo />
+            <Logo height={'48'} />
           </Link>
         </div>
         <div className='flex gap-x-12'>

@@ -81,7 +81,7 @@ export default function RecipeForm({ recipe }: { recipe?: iRecipe }) {
         };
         await CreateRecipe(newRecipe).then((response: AxiosResponse) => {
           console.log('createdRecipe: ', response);
-          router.push('/recipes');
+          router.push('/admin');
         });
       };
       createRecipe();
