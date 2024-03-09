@@ -7,7 +7,7 @@ import { usePathname } from 'next/navigation';
 const navigation = [
   { name: 'Home', href: '/' },
   { name: 'Recipes', href: '/recipes' },
-  { name: 'Roadmap', href: '/roadmap' },
+  { name: 'Contact', href: 'https://greatidea.dev/', target: '_blank' },
 ];
 
 export default function Navigation() {
@@ -30,14 +30,18 @@ export default function Navigation() {
             <Link
               key={item.name}
               href={item.href}
-              className='text-sm font-semibold leading-6 text-gray-900'
+              target={item.target}
+              className='text-sm font-semibold leading-6 text-gray-900 hover:text-cyan-500'
             >
               {item.name}
             </Link>
           ))}
         </div>
         <div className='flex justify-end flex-1'>
-          <Link href={'/login'} className='text-sm font-semibold leading-6 text-gray-900'>
+          <Link
+            href={'/login'}
+            className='text-sm font-semibold leading-6 text-gray-900 hover:text-cyan-500'
+          >
             Log in <span aria-hidden='true'>&rarr;</span>
           </Link>
         </div>

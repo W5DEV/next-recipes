@@ -1,7 +1,6 @@
 'use client';
 import Hero from '../../components/Hero';
 import FeaturedRecipes from '../../components/FeaturedRecipes';
-import CTA from '../../components/CTA';
 import { useRouter } from 'next/navigation';
 
 export default function Home() {
@@ -11,7 +10,6 @@ export default function Home() {
       <div className='flex-col hidden sm:flex'>
         <Hero />
         <FeaturedRecipes />
-        <CTA />
       </div>
       <div className='flex flex-col sm:hidden'>
         <button

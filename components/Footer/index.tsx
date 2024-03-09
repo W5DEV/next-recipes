@@ -3,33 +3,29 @@ import Link from 'next/link';
 const navigation = {
   main: [
     { name: 'Home', href: '/' },
-    { name: 'Demo', href: '/demo' },
-    { name: 'Roadmap', href: '/roadmap' },
+    { name: 'Recipes', href: '/recipes' },
     { name: 'Login', href: '/admin' },
   ],
 };
 
 export default function Example() {
   return (
-    <footer className='bg-transparent z-50 relative'>
-      <div className='mx-auto max-w-7xl overflow-hidden px-6 py-12 sm:py-16 lg:px-8'>
-        <nav
-          className='-mb-6 columns-2 sm:flex sm:justify-center sm:space-x-12'
-          aria-label='Footer'
-        >
+    <footer className='relative z-50 py-6 bg-transparent'>
+      <div className='flex flex-col items-center justify-center gap-2 px-6 overflow-hidden max-w-7xl lg:px-8'>
+        <nav className='flex flex-row items-center justify-center gap-4' aria-label='Footer'>
           {navigation.main.map((item) => (
-            <div key={item.name} className='pb-6'>
+            <div key={item.name}>
               <Link
                 href={item.href}
-                className='text-sm leading-6 text-gray-600 hover:text-gray-900'
+                className='text-sm leading-6 text-gray-600 hover:text-cyan-500'
               >
                 {item.name}
               </Link>
             </div>
           ))}
         </nav>
-        <p className='mt-10 text-center text-xs leading-5 text-gray-500'>
-          &copy; 2023 Recipe Vault Online. All rights reserved.
+        <p className='text-xs leading-5 text-center text-gray-500'>
+          &copy; 2024 Great Idea Development
         </p>
       </div>
     </footer>
