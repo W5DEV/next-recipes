@@ -25,26 +25,44 @@ export default function RecipeModule({ recipe }: iRecipeModuleProps) {
           <h2 className='mt-8 text-xl font-semibold tracking-tight text-gray-800'>Ingredients</h2>
           <ul role='list' className='max-w-xl mt-8 space-y-2 text-gray-600'>
             {ingredients &&
-              Object.values(ingredients).map((ingredient) => (
-                <li key={Math.random()} className='flex items-center justify-start w-full gap-x-3'>
-                  <span className='flex items-center justify-center w-4 h-4 text-xs font-bold text-center text-white border-2 border-cyan-600'></span>
-                  <span>{ingredient}</span>
-                </li>
-              ))}
+              Object.values(ingredients).map((ingredient) =>
+                ingredient.includes('::') ? (
+                  <li
+                    key={Math.random()}
+                    className='flex items-center justify-start w-full gap-x-3'
+                  >
+                    <span className='flex-1 font-bold'>{ingredient.replace('::', '')}</span>
+                  </li>
+                ) : (
+                  <li
+                    key={Math.random()}
+                    className='flex items-center justify-start w-full gap-x-3'
+                  >
+                    <span className='flex items-center justify-center w-4 h-4 text-xs font-bold text-center text-white border-2 border-cyan-600'></span>
+                    <span className='flex-1'>{ingredient}</span>
+                  </li>
+                ),
+              )}
           </ul>
         </div>
         <div className='max-w-2xl mt-10'>
           <h2 className='mt-8 text-xl font-semibold tracking-tight text-gray-800'>Instructions</h2>
           <ul role='list' className='w-full mt-8 space-y-2 text-gray-600'>
             {instructions &&
-              instructions.map((instruction, index) => (
-                <li key={Math.random()} className='flex flex-row gap-4 py-2 text-gray-500'>
-                  <span className='flex items-center justify-center w-8 h-8 text-xs font-bold text-center text-white rounded-full bg-cyan-600'>
-                    {index + 1}
-                  </span>
-                  <span className='flex-1'>{instruction}</span>
-                </li>
-              ))}
+              instructions.map((instruction, index) =>
+                instruction.includes('::') ? (
+                  <li key={Math.random()} className='flex flex-row gap-4 py-2 text-gray-500'>
+                    <span className='flex-1 font-bold'>{instruction.replace('::', '')}</span>
+                  </li>
+                ) : (
+                  <li key={Math.random()} className='flex flex-row gap-4 py-2 text-gray-500'>
+                    <span className='flex items-center justify-center w-8 h-8 text-xs font-bold text-center text-white rounded-full bg-cyan-600'>
+                      {index + 1}
+                    </span>
+                    <span className='flex-1'>{instruction}</span>
+                  </li>
+                ),
+              )}
           </ul>
         </div>
         <div className='flex flex-row items-center justify-start gap-2 py-4 opacity-40'>

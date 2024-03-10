@@ -177,7 +177,8 @@ export default function RecipeForm({ recipe }: { recipe?: iRecipe }) {
             Ingredients
             <p className='text-sm italic font-normal opacity-40'>
               Put each ingredient on a new line by hitting enter. Do not try to space out the
-              ingredients and make sure there are no extra trailing spaces.
+              ingredients and make sure there are no extra trailing spaces. To add headings, use two
+              colons on the left side of the word, for example &quot;::Assembly:&quot;.
             </p>
           </label>
           <textarea
@@ -194,6 +195,8 @@ export default function RecipeForm({ recipe }: { recipe?: iRecipe }) {
           <p className='text-sm italic font-normal opacity-40'>
             Put each instruction on a new line by hitting enter. Do not try to space out the
             instructions and make sure there are no extra trailing spaces. No need to enter numbers!
+            The numbers will be added automatically. To add headings, use two colons on the left
+            side of the word, for example &quot;::Assembly:&quot;.
           </p>
           <textarea
             className='w-full h-48 rounded-md'

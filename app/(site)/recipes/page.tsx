@@ -144,7 +144,7 @@ export default function Home() {
                         })}
                       </span>
                     </span>
-                    <p className='text-xs text-gray-700'>{recipe.description}</p>
+                    <p className='text-xs text-gray-700 line-clamp-3'>{recipe.description}</p>
                   </li>
                 ))}
               </ul>
