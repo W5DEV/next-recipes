@@ -10,6 +10,7 @@ interface iRecipeModuleProps {
 export default function PublicRecipeModule({ recipe }: iRecipeModuleProps) {
   const ingredients = recipe && recipe.ingredients;
   const instructions = recipe && recipe.instructions;
+  let step = 0;
 
   return (
     <div className='flex flex-col items-start justify-center w-full px-8 py-12 bg-white lg:px-8'>
@@ -60,18 +61,21 @@ export default function PublicRecipeModule({ recipe }: iRecipeModuleProps) {
           <h2 className='mt-8 text-xl font-semibold tracking-tight text-gray-800'>Instructions</h2>
           <ul role='list' className='w-full mt-8 space-y-2 text-gray-600'>
             {instructions &&
-              instructions.map((instruction, index) =>
+              instructions.map((instruction) =>
                 instruction.includes('::') ? (
                   <li key={Math.random()} className='flex flex-row gap-4 py-2 text-gray-500'>
                     <span className='flex-1 font-bold'>{instruction.replace('::', '')}</span>
                   </li>
                 ) : (
-                  <li key={Math.random()} className='flex flex-row gap-4 py-2 text-gray-500'>
-                    <span className='flex items-center justify-center w-8 h-8 text-xs font-bold text-center text-white rounded-full bg-cyan-600'>
-                      {index + 1}
-                    </span>
-                    <span className='flex-1'>{instruction}</span>
-                  </li>
+                  (step++,
+                  (
+                    <li key={Math.random()} className='flex flex-row gap-4 py-2 text-gray-500'>
+                      <span className='flex items-center justify-center w-8 h-8 text-xs font-bold text-center text-white rounded-full bg-cyan-600'>
+                        {step}
+                      </span>
+                      <span className='flex-1'>{instruction}</span>
+                    </li>
+                  ))
                 ),
               )}
           </ul>
