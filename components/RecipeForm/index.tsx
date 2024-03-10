@@ -59,7 +59,7 @@ export default function RecipeForm({ recipe }: { recipe?: iRecipe }) {
       const updateRecipe = async () => {
         await UpdateRecipe(updatedRecipe.id, updatedRecipe).then((response: AxiosResponse) => {
           console.log('updatedRecipe: ', response);
-          router.push('/login');
+          router.push('/admin');
         });
       };
       updateRecipe();
@@ -82,7 +82,7 @@ export default function RecipeForm({ recipe }: { recipe?: iRecipe }) {
         };
         await CreateRecipe(newRecipe).then((response: AxiosResponse) => {
           console.log('createdRecipe: ', response);
-          router.push('/admin');
+          router.push('/login');
         });
       };
       createRecipe();
