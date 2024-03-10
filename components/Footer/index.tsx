@@ -4,6 +4,7 @@ const navigation = {
   main: [
     { name: 'Home', href: '/' },
     { name: 'Recipes', href: '/recipes' },
+    { name: 'Contact', href: 'https://greatidea.dev/', target: '_blank' },
     { name: 'Login', href: '/admin' },
   ],
 };
