@@ -24,7 +24,7 @@ The frontend utilizes Next.js as the framework, with Tailwind CSS for styling.
 
 - This code uses ESLint to establish consistently formatted code. Format on save should work with this and is recommended.
 - Pages should be kept as simple as possible, and Components should be created wherever code may be duplicated.
-- Page and Component styling should be done with Tailwind CSS until forced otherwise. 
+- Page and Component styling should be done with Tailwind CSS until forced otherwise.
 
 ## Workflow
 
@@ -42,8 +42,8 @@ The frontend utilizes Next.js as the framework, with Tailwind CSS for styling.
 4. ~~Implement the ability to add new recipes and edit existing recipes.~~
 5. ~~Figure out recipe image handling. (This may be a phase 2 feature)~~
 6. ~~Restyle Recipe page to work better with recipes with and without images.~~
-7. Create local checkboxes for ingredients so users can check off ingredients.
-8. Implement search/filter function on recipe dashboard.
+7. ~~Create local checkboxes for ingredients so users can check off ingredients.~~
+8. ~~Implement search/filter function on recipe dashboard.~~
 9. Implement printer-optimized version of recipe page.
 10. Implement "grocery list" print view.
 
