@@ -39,7 +39,10 @@ export default function RecipeModule({ recipe }: iRecipeModuleProps) {
                     key={Math.random()}
                     className='flex items-center justify-start w-full gap-x-3'
                   >
-                    <span className='flex items-center justify-center w-4 h-4 text-xs font-bold text-center text-white border-2 border-cyan-600'></span>
+                    <input
+                      type='checkbox'
+                      className='flex items-center justify-center w-5 h-5 text-xs font-bold text-center border-2 rounded text-cyan-600 focus:ring-0 focus:ring-offset-0 border-cyan-600'
+                    />
                     <span className='flex-1'>{ingredient}</span>
                   </li>
                 ),
