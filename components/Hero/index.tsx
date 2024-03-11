@@ -56,14 +56,8 @@ export default function Hero() {
                 Stop wasting time searching through binders and boxes for your favorite recipes.
                 Securely save your recipes in one place and access them anywhere.
               </p>
-              <div className='flex items-center mt-10 gap-x-6'>
-                <Link
-                  href='#'
-                  className='rounded-md bg-cyan-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-cyan-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cyan-400'
-                >
-                  Get started
-                </Link>
-                <Link href='#' className='text-sm font-semibold leading-6 text-gray-900'>
+              <div className='flex items-center justify-end w-full mt-10 gap-x-6'>
+                <Link href='/recipes' className='text-sm font-semibold leading-6 text-gray-900'>
                   Live demo <span aria-hidden='true'>→</span>
                 </Link>
               </div>
