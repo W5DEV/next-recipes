@@ -23,16 +23,16 @@ The frontend utilizes Next.js as the framework, with Tailwind CSS for styling.
 ### Code Best-Practices
 
 - This code uses ESLint to establish consistently formatted code. Format on save should work with this and is recommended.
-- Pages and Components should be thought of as a 2-tier system: 'How It Looks' and 'How It Works'. To accomplish this, styling should be done with Tailwind CSS until forced otherwise. The Template section should deal with how the code looks/renders in the browser. The Script section should be focused on logic and function of the code in the browser. Style sections should be minimally used unless forced by animation or specific purposes.
+- Pages should be kept as simple as possible, and Components should be created wherever code may be duplicated.
+- Page and Component styling should be done with Tailwind CSS until forced otherwise. 
 
 ## Workflow
 
-1. An unauthenticated user (global user) will be able to see a description and sample recipes to get a feel for the way the front-end interface works.
-2. At any time, a user will be able to login with pre-existing credentials to view the entire library of recipes.
+1. An unauthenticated user (global user) will be able to visit the home page, view demo recipes, and view a dashboard where they can see all recipes entered into the system, however they will not be able to add or edit recipes.
+2. At any time, a user will be able to login with backend-defined credentials to view the entire library of recipes.
 3. Logged in users will be able to search and browse all recipes in the connected database.
-4. Logged in users will be able to access a backend where they will see a list of recipes, which they can choose to edit or delete.
-5. Logged in users will be able to add new recipes.
-6. Viewing recipes will also give the ability to print the recipe, and should include a button to generate a printer-friendly version of the recipe without images, optimized for black and white printers, and in a reasonable format for a single sheet of paper.
+4. Logged in users will be able tto choose to create, delete or edit recipes.
+5. Viewing recipes will also give the ability to print the recipe, and should include a button to generate a printer-friendly version of the recipe without images, optimized for black and white printers, and in a reasonable format for standard sheets of paper.
 
 ## To-Do (Phase 1)
 
@@ -41,13 +41,14 @@ The frontend utilizes Next.js as the framework, with Tailwind CSS for styling.
 3. ~~Create a recipe dashboard that shows all recipes in the database.~~
 4. ~~Implement the ability to add new recipes and edit existing recipes.~~
 5. ~~Figure out recipe image handling. (This may be a phase 2 feature)~~
-6. Restyle Recipe page to work better with recipes with and without images.
-7. Implement printer-optimized version of recipe page.
+6. ~~Restyle Recipe page to work better with recipes with and without images.~~
+7. Create local checkboxes for ingredients so users can check off ingredients.
+8. Implement search/filter function on recipe dashboard.
+9. Implement printer-optimized version of recipe page.
+10. Implement "grocery list" print view.
 
 ## To-Do (Phase 2)
 
 1. Image handling - rework recipe display page and make room for small image if available.
-2. Create more user-friendly public recipes.
-3. Implement search/filter function on recipe dashboard
-4. Create a 'favorites' tab under account that shows all recipes that have been favorited by the user.
-5. Create a 'shopping list' tab under account that shows all ingredients from all recipes that have been added to the shopping list by the user.
+2. Create more user-friendly demo recipes.
+3. Create a "shopping list" view in the dashboard (new API call?) which tracks ingredients from recipes that are flagged for creation
