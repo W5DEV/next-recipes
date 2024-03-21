@@ -1,7 +1,5 @@
 'use client';
 import Link from 'next/link';
-import Logo from '../Logo';
-
 const navigation = [
   { name: 'Home', href: '/' },
   { name: 'Recipes', href: '/recipes' },
@@ -18,7 +16,9 @@ export default function Navigation() {
         <div className='flex flex-1'>
           <Link href='/' className='-m-1.5 p-1.5'>
             <span className='sr-only'>My Online Cookbook</span>
-            <Logo height={'48'} />
+            <picture>
+              <img src='./logo-maroon.png' className='w-24 h-24 p-4' alt='cookbook logo' />
+            </picture>
           </Link>
         </div>
         <div className='flex gap-x-12'>

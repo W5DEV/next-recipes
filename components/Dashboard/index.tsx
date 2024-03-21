@@ -1,7 +1,6 @@
 'use client';
 
 import { Disclosure } from '@headlessui/react';
-import Logo from '../Logo';
 
 export default function Dashboard({ children, name }: { children: React.ReactNode; name: string }) {
   return (
@@ -17,7 +16,9 @@ export default function Dashboard({ children, name }: { children: React.ReactNod
                 <div className='relative flex items-center justify-between h-16 lg:border-b lg:border-cyan-400 lg:border-opacity-25'>
                   <div className='flex items-center px-2 lg:px-0'>
                     <div className='flex-shrink-0'>
-                      <Logo height={'48'} color={'white '} />
+                      <picture>
+                        <img src='./logo-white.png' className='w-full h-full' alt='cookbook logo' />
+                      </picture>
                     </div>
                   </div>
                 </div>

@@ -9,7 +9,6 @@ import { Disclosure } from '@headlessui/react';
 import { GetAllRecipes } from '@/api';
 import { MagnifyingGlassIcon } from '@heroicons/react/20/solid';
 import { useRouter } from 'next/navigation';
-import Logo from '@/components/Logo';
 
 export default function Home() {
   const router = useRouter();
@@ -83,7 +82,9 @@ export default function Home() {
                 <div className='relative flex items-center justify-between h-16 lg:border-b lg:border-cyan-400 lg:border-opacity-25'>
                   <div className='flex items-center px-2 lg:px-0'>
                     <a href='/' className='flex items-center flex-shrink-0 w-14 h-14 jusify-center'>
-                      <Logo height={'48'} color={'white '} />
+                      <picture>
+                        <img src='./logo-white.png' className='w-full h-full' alt='cookbook logo' />
+                      </picture>
                     </a>
                   </div>
                   <div className='flex justify-center flex-1 px-2 lg:ml-6 lg:justify-end'>
